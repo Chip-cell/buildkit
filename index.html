@@ -729,8 +729,11 @@ figcaption{font-family:var(--mono);font-size:11px;color:var(--muted);margin-top:
 @media(max-width:420px){.wrap{padding-left:16px;padding-right:16px}.searchbox input{width:44vw}.sresults{position:fixed;left:12px;right:12px;top:66px;min-width:0;max-width:none}.home-chips .chip{flex:1}.qbudgets{grid-template-columns:1fr}}
 
 footer{padding:50px 0 60px;font-size:13.5px;color:var(--muted);border-top:1px solid var(--line)}
-.foot-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:44px}
-@media(max-width:760px){.foot-grid{grid-template-columns:1fr}}
+.foot-grid{display:grid;grid-template-columns:1.1fr 1.2fr .9fr;gap:44px}
+.foot-contact a{font-family:var(--mono);font-size:13px;color:var(--copper-dk);text-decoration:none;border-bottom:1px solid var(--line);overflow-wrap:anywhere}
+.foot-contact a:hover{border-bottom-color:var(--copper)}
+.foot-contact a:focus-visible{outline:2px solid var(--copper);outline-offset:2px}
+@media(max-width:760px){.foot-grid{grid-template-columns:1fr;gap:28px}}
 footer h4{font-family:var(--mono);font-size:11.5px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--copper-dk);margin-bottom:12px}
 footer li{margin-bottom:8px;list-style:none}
 
@@ -1579,7 +1582,7 @@ footer li{margin-bottom:8px;list-style:none}
 <div class="modal-overlay" id="laptopModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal-card"><button class="modal-close" type="button" id="modalCloseBtn">Close [Esc]</button><div id="modalContent"></div></div></div>
 
 
-<footer><div class="wrap foot-grid"><div><h4>About BuildKit</h4><p>BuildKit helps people choose compatible desktop parts, compare laptops and understand the hardware they are buying.</p></div><div><h4>Data honesty</h4><p>Product information and prices are dated snapshots and should be verified before purchase. BuildKit is not affiliated with the retailers or manufacturers listed. Laptop descriptions omit fields that are not published for the exact configuration.</p><p id="dataStatus" class="data-status"></p><p><a href="#" id="dataStatusLink" class="data-status-link">Data status &rarr;</a></p></div></div>
+<footer><div class="wrap foot-grid"><div><h4>About BuildKit</h4><p>BuildKit helps people choose compatible desktop parts, compare laptops and understand the hardware they are buying.</p></div><div><h4>Data honesty</h4><p>Product information and prices are dated snapshots and should be verified before purchase. BuildKit is not affiliated with the retailers or manufacturers listed. Laptop descriptions omit fields that are not published for the exact configuration.</p><p id="dataStatus" class="data-status"></p><p><a href="#" id="dataStatusLink" class="data-status-link">Data status &rarr;</a></p></div><div><h4>Contact</h4><p>Found a wrong price, a missing configuration, or something that should work differently? Corrections and suggestions are welcome.</p><p class="foot-contact"><a href="mailto:buildkitindia@gmail.com?subject=BuildKit%20%E2%80%94%20suggestion">buildkitindia@gmail.com</a></p></div></div>
 
 <div class="wrap"><div id="loadError" hidden></div><section id="dataPanel" class="data-panel" hidden aria-label="Data quality report"></section></div></footer>
 
