@@ -17,7 +17,7 @@ for(const {laptop} of additions){
   assert.equal(context.laptopValueWarning(L),'');assert.equal(context.laptopValueBadge(L),'');
   assert.equal(L.specCheckedAt,'2026-10-24');
   if(L.brand==='Acer')assert(Number.isFinite(context.laptopBuyPrice(L)),L.pn+' must retain its observed offer');
-  else assert.equal(context.laptopBuyPrice(L),null,'Unknown stock must not be buyable');
+  else {assert.equal(context.laptopBuyPrice(L),null,'Unknown stock must not be buyable');assert.equal(context.laptopPriceStatus(L).kind,'REFERENCE');assert(context.buyLinksFor(L)[0].flags.includes('STOCK_UNCONFIRMED'));}
 }
 const operator=context.LAPTOPS.find(L=>L.offers.some(o=>o.operatorSupplied));
 assert(operator);assert.equal(context.laptopBuyPrice(operator),null);
@@ -56,4 +56,5 @@ assert.equal(nodes.homeBudget.value,220000);assert.equal(nodes.homeBudgetOut.tex
 assert(nodes.homeBuildPreview.innerHTML.includes('missing compatible part'));
 context.optimizeDesktop=optimize;
 console.log(`PASS: ${scripts} scripts; 616 unique records; 8 additions; price evidence, stock, search, pagination and 9 desktop profiles.`);
+
 
