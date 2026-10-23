@@ -1,0 +1,806 @@
+[
+  {
+    "laptop": {
+      "id": "lap_acer_un_35msi_012",
+      "brand": "Acer",
+      "family": "Aspire 15",
+      "modelName": "Aspire 15 AS15-42 — Ryzen 7 7730U / 16GB / 512GB",
+      "pn": "UN.35MSI.012",
+      "cpu": "AMD Ryzen 7 7730U",
+      "gpu": "AMD Radeon Graphics",
+      "vram": null,
+      "tgp": null,
+      "gpuTier": 0,
+      "os": "Windows 11 Home",
+      "ram": "16GB",
+      "ramGB": 16,
+      "ramType": "DDR4",
+      "ramSoldered": false,
+      "ssd": "512GB PCIe NVMe SSD",
+      "storageSlots": null,
+      "ssdUpgradeable": null,
+      "dispSize": 15.6,
+      "res": "1920 × 1080",
+      "refreshHz": null,
+      "panelType": "IPS",
+      "oled": false,
+      "touch": null,
+      "twoInOne": null,
+      "brightness": null,
+      "colorCoverage": null,
+      "batteryWh": null,
+      "weight": 1.79,
+      "ports": null,
+      "wifi": null,
+      "webcam": null,
+      "warranty": null,
+      "strengths": [
+        "1.79kg weight listed for this exact SKU.",
+        "IPS display with Full HD resolution."
+      ],
+      "downsides": [
+        "Integrated graphics; no discrete gaming GPU is listed."
+      ],
+      "categoryTags": [
+        "Students",
+        "Office"
+      ],
+      "exact": true,
+      "generationStatus": null,
+      "catalogueStatus": "SOURCED",
+      "recordStatus": "PRODUCT_PAGE_CHECKED",
+      "specSource": "https://store.acer.com/en-in/acer-aspire-15-amd-ryzen-r7-7730u-processor-windows-11-home-16-2-8-gb-ram-512-gb-ssd-15-6-39-62-cm-display-pure-silver-as15-42-1-79-kg-thin-and-light-laptop",
+      "specCheckedAt": "2026-10-24",
+      "specSourceNote": "Exact India store product page read 24 October 2026. Unknown fields remain null. No independent performance or battery benchmark was checked.",
+      "evidenceConfidence": "Exact SKU, configuration, displayed price and stock text observed on the linked store page; checkout not attempted.",
+      "scores": {},
+      "rankingStatus": "NOT_BENCHMARKED"
+    },
+    "priceRecord": {
+      "verifiedAt": "2026-10-24",
+      "offers": [
+        {
+          "retailer": "Acer India Store",
+          "sku": "UN.35MSI.012",
+          "price": 54999,
+          "mrp": null,
+          "inStock": true,
+          "stock": "IN_STOCK",
+          "checkedAt": "2026-10-24",
+          "sourceUrl": "https://store.acer.com/en-in/acer-aspire-15-amd-ryzen-r7-7730u-processor-windows-11-home-16-2-8-gb-ram-512-gb-ssd-15-6-39-62-cm-display-pure-silver-as15-42-1-79-kg-thin-and-light-laptop",
+          "canonicalUrl": "https://store.acer.com/en-in/acer-aspire-15-amd-ryzen-r7-7730u-processor-windows-11-home-16-2-8-gb-ram-512-gb-ssd-15-6-39-62-cm-display-pure-silver-as15-42-1-79-kg-thin-and-light-laptop",
+          "exactSkuMatch": true,
+          "configurationVerified": true,
+          "linkStatus": "VERIFIED",
+          "linkCheckedAt": "2026-10-24",
+          "httpStatus": 200,
+          "checkedFields": [
+            "sku",
+            "cpu",
+            "memory",
+            "storage",
+            "display",
+            "price",
+            "stock"
+          ],
+          "region": "India",
+          "offerType": "ONLINE",
+          "linkNote": "Observed on the exact product page. No bank/card/coupon discount applied; checkout availability is not guaranteed."
+        }
+      ],
+      "history": [
+        {
+          "observedAt": "2026-10-24",
+          "retailer": "Acer India Store",
+          "sku": "UN.35MSI.012",
+          "price": 54999,
+          "sourceUrl": "https://store.acer.com/en-in/acer-aspire-15-amd-ryzen-r7-7730u-processor-windows-11-home-16-2-8-gb-ram-512-gb-ssd-15-6-39-62-cm-display-pure-silver-as15-42-1-79-kg-thin-and-light-laptop",
+          "stock": "IN_STOCK"
+        }
+      ]
+    }
+  },
+  {
+    "laptop": {
+      "id": "lap_acer_un_38gsi_004",
+      "brand": "Acer",
+      "family": "Swift Neo",
+      "modelName": "Swift Neo SFN14-56 — Ultra 5 226V / 16GB / 512GB",
+      "pn": "UN.38GSI.004",
+      "cpu": "Intel Core Ultra 5 226V",
+      "gpu": "Intel Arc Graphics",
+      "vram": null,
+      "tgp": null,
+      "gpuTier": 0,
+      "os": "Windows 11 Home",
+      "ram": "16GB",
+      "ramGB": 16,
+      "ramType": "LPDDR5X",
+      "ramSoldered": true,
+      "ssd": "512GB PCIe NVMe SSD",
+      "storageSlots": null,
+      "ssdUpgradeable": null,
+      "dispSize": 14,
+      "res": "1920 × 1200",
+      "refreshHz": null,
+      "panelType": "IPS",
+      "oled": false,
+      "touch": null,
+      "twoInOne": null,
+      "brightness": 300,
+      "colorCoverage": null,
+      "batteryWh": null,
+      "weight": 1.25,
+      "ports": null,
+      "wifi": null,
+      "webcam": null,
+      "warranty": null,
+      "strengths": [
+        "1.25kg weight listed for this exact SKU.",
+        "IPS display with 16:10 resolution."
+      ],
+      "downsides": [
+        "Integrated graphics; no discrete gaming GPU is listed.",
+        "Onboard memory is listed; do not assume a RAM upgrade slot."
+      ],
+      "categoryTags": [
+        "Students",
+        "Office"
+      ],
+      "exact": true,
+      "generationStatus": null,
+      "catalogueStatus": "SOURCED",
+      "recordStatus": "PRODUCT_PAGE_CHECKED",
+      "specSource": "https://store.acer.com/en-in/acer-swift-neo-intel-core-ultra-5-processor-226v-windows-11-home-ms-office-16-gb-ram-512-gb-ssd-14-0-35-56-cm-display-gray-sfn14-56-fingerprint-reader-1-25-kg-thin-and-light-laptop",
+      "specCheckedAt": "2026-10-24",
+      "specSourceNote": "Exact India store product page read 24 October 2026. Unknown fields remain null. No independent performance or battery benchmark was checked.",
+      "evidenceConfidence": "Exact SKU, configuration, displayed price and stock text observed on the linked store page; checkout not attempted.",
+      "scores": {},
+      "rankingStatus": "NOT_BENCHMARKED"
+    },
+    "priceRecord": {
+      "verifiedAt": "2026-10-24",
+      "offers": [
+        {
+          "retailer": "Acer India Store",
+          "sku": "UN.38GSI.004",
+          "price": 72999,
+          "mrp": null,
+          "inStock": true,
+          "stock": "IN_STOCK",
+          "checkedAt": "2026-10-24",
+          "sourceUrl": "https://store.acer.com/en-in/acer-swift-neo-intel-core-ultra-5-processor-226v-windows-11-home-ms-office-16-gb-ram-512-gb-ssd-14-0-35-56-cm-display-gray-sfn14-56-fingerprint-reader-1-25-kg-thin-and-light-laptop",
+          "canonicalUrl": "https://store.acer.com/en-in/acer-swift-neo-intel-core-ultra-5-processor-226v-windows-11-home-ms-office-16-gb-ram-512-gb-ssd-14-0-35-56-cm-display-gray-sfn14-56-fingerprint-reader-1-25-kg-thin-and-light-laptop",
+          "exactSkuMatch": true,
+          "configurationVerified": true,
+          "linkStatus": "VERIFIED",
+          "linkCheckedAt": "2026-10-24",
+          "httpStatus": 200,
+          "checkedFields": [
+            "sku",
+            "cpu",
+            "memory",
+            "storage",
+            "display",
+            "price",
+            "stock"
+          ],
+          "region": "India",
+          "offerType": "ONLINE",
+          "linkNote": "Observed on the exact product page. No bank/card/coupon discount applied; checkout availability is not guaranteed."
+        }
+      ],
+      "history": [
+        {
+          "observedAt": "2026-10-24",
+          "retailer": "Acer India Store",
+          "sku": "UN.38GSI.004",
+          "price": 72999,
+          "sourceUrl": "https://store.acer.com/en-in/acer-swift-neo-intel-core-ultra-5-processor-226v-windows-11-home-ms-office-16-gb-ram-512-gb-ssd-14-0-35-56-cm-display-gray-sfn14-56-fingerprint-reader-1-25-kg-thin-and-light-laptop",
+          "stock": "IN_STOCK"
+        }
+      ]
+    }
+  },
+  {
+    "laptop": {
+      "id": "lap_acer_un_38gsi_005",
+      "brand": "Acer",
+      "family": "Swift Neo",
+      "modelName": "Swift Neo SFN14-56 — Ultra 5 226V / 16GB / 512GB",
+      "pn": "UN.38GSI.005",
+      "cpu": "Intel Core Ultra 5 226V",
+      "gpu": "Intel Arc Graphics",
+      "vram": null,
+      "tgp": null,
+      "gpuTier": 0,
+      "os": "Windows 11 Home",
+      "ram": "16GB",
+      "ramGB": 16,
+      "ramType": "LPDDR5X",
+      "ramSoldered": true,
+      "ssd": "512GB PCIe NVMe SSD",
+      "storageSlots": null,
+      "ssdUpgradeable": null,
+      "dispSize": 14,
+      "res": "1920 × 1200",
+      "refreshHz": null,
+      "panelType": null,
+      "oled": null,
+      "touch": null,
+      "twoInOne": null,
+      "brightness": 400,
+      "colorCoverage": null,
+      "batteryWh": null,
+      "weight": 1.25,
+      "ports": null,
+      "wifi": null,
+      "webcam": null,
+      "warranty": null,
+      "strengths": [
+        "1.25kg weight listed for this exact SKU.",
+        "16GB memory and 512GB NVMe storage."
+      ],
+      "downsides": [
+        "The store uses both OLED and IPS wording. Confirm the exact panel before purchase.",
+        "Integrated graphics; no discrete gaming GPU is listed.",
+        "Onboard memory is listed; do not assume a RAM upgrade slot."
+      ],
+      "categoryTags": [
+        "Students",
+        "Office"
+      ],
+      "exact": true,
+      "generationStatus": null,
+      "catalogueStatus": "SOURCED",
+      "recordStatus": "PRODUCT_PAGE_CHECKED",
+      "specSource": "https://store.acer.com/en-in/acer-swift-neo-intel-core-ultra-5-processor-226v-windows-11-home-ms-office-16-gb-ram-512-gb-ssd-14-0-35-56-cm-display-gray-fingerprint-reader-sfn14-56-1-25-kg-thin-and-light-laptop",
+      "specCheckedAt": "2026-10-24",
+      "specSourceNote": "Exact India store product page read 24 October 2026. Unknown fields remain null. No independent performance or battery benchmark was checked.",
+      "evidenceConfidence": "Exact SKU, configuration, displayed price and stock text observed on the linked store page; checkout not attempted.",
+      "scores": {},
+      "rankingStatus": "NOT_BENCHMARKED"
+    },
+    "priceRecord": {
+      "verifiedAt": "2026-10-24",
+      "offers": [
+        {
+          "retailer": "Acer India Store",
+          "sku": "UN.38GSI.005",
+          "price": 77999,
+          "mrp": null,
+          "inStock": true,
+          "stock": "IN_STOCK",
+          "checkedAt": "2026-10-24",
+          "sourceUrl": "https://store.acer.com/en-in/acer-swift-neo-intel-core-ultra-5-processor-226v-windows-11-home-ms-office-16-gb-ram-512-gb-ssd-14-0-35-56-cm-display-gray-fingerprint-reader-sfn14-56-1-25-kg-thin-and-light-laptop",
+          "canonicalUrl": "https://store.acer.com/en-in/acer-swift-neo-intel-core-ultra-5-processor-226v-windows-11-home-ms-office-16-gb-ram-512-gb-ssd-14-0-35-56-cm-display-gray-fingerprint-reader-sfn14-56-1-25-kg-thin-and-light-laptop",
+          "exactSkuMatch": true,
+          "configurationVerified": true,
+          "linkStatus": "VERIFIED",
+          "linkCheckedAt": "2026-10-24",
+          "httpStatus": 200,
+          "checkedFields": [
+            "sku",
+            "cpu",
+            "memory",
+            "storage",
+            "display",
+            "price",
+            "stock"
+          ],
+          "region": "India",
+          "offerType": "ONLINE",
+          "linkNote": "Observed on the exact product page. No bank/card/coupon discount applied; checkout availability is not guaranteed."
+        }
+      ],
+      "history": [
+        {
+          "observedAt": "2026-10-24",
+          "retailer": "Acer India Store",
+          "sku": "UN.38GSI.005",
+          "price": 77999,
+          "sourceUrl": "https://store.acer.com/en-in/acer-swift-neo-intel-core-ultra-5-processor-226v-windows-11-home-ms-office-16-gb-ram-512-gb-ssd-14-0-35-56-cm-display-gray-fingerprint-reader-sfn14-56-1-25-kg-thin-and-light-laptop",
+          "stock": "IN_STOCK"
+        }
+      ]
+    }
+  },
+  {
+    "laptop": {
+      "id": "lap_acer_un_37qsi_005",
+      "brand": "Acer",
+      "family": "Swift Neo",
+      "modelName": "Swift Neo SFN14-55 — Ultra 5 125H / 16GB / 512GB",
+      "pn": "UN.37QSI.005",
+      "cpu": "Intel Core Ultra 5 125H",
+      "gpu": "Intel Arc Graphics",
+      "vram": null,
+      "tgp": null,
+      "gpuTier": 0,
+      "os": "Windows 11 Home",
+      "ram": "16GB",
+      "ramGB": 16,
+      "ramType": "LPDDR5",
+      "ramSoldered": true,
+      "ssd": "512GB PCIe NVMe SSD",
+      "storageSlots": null,
+      "ssdUpgradeable": null,
+      "dispSize": 14,
+      "res": "1920 × 1200",
+      "refreshHz": null,
+      "panelType": "OLED",
+      "oled": true,
+      "touch": null,
+      "twoInOne": null,
+      "brightness": 400,
+      "colorCoverage": "100% sRGB (store specification)",
+      "batteryWh": null,
+      "weight": 1.25,
+      "ports": null,
+      "wifi": null,
+      "webcam": null,
+      "warranty": null,
+      "strengths": [
+        "1.25kg weight listed for this exact SKU.",
+        "OLED display with 16:10 resolution."
+      ],
+      "downsides": [
+        "Integrated graphics; no discrete gaming GPU is listed.",
+        "Onboard memory is listed; do not assume a RAM upgrade slot."
+      ],
+      "categoryTags": [
+        "Students",
+        "Office"
+      ],
+      "exact": true,
+      "generationStatus": null,
+      "catalogueStatus": "SOURCED",
+      "recordStatus": "PRODUCT_PAGE_CHECKED",
+      "specSource": "https://store.acer.com/en-in/acer-swift-neo-intel-core-ultra-5-processor-125h-windows-11-home-ms-office-16-gb-ram-512gb-ssd-14-0-35-56-cm-display-steel-gray-sfn14-55-1-25-kg-thin-and-light-laptop",
+      "specCheckedAt": "2026-10-24",
+      "specSourceNote": "Exact India store product page read 24 October 2026. Unknown fields remain null. No independent performance or battery benchmark was checked.",
+      "evidenceConfidence": "Exact SKU, configuration, displayed price and stock text observed on the linked store page; checkout not attempted.",
+      "scores": {},
+      "rankingStatus": "NOT_BENCHMARKED"
+    },
+    "priceRecord": {
+      "verifiedAt": "2026-10-24",
+      "offers": [
+        {
+          "retailer": "Acer India Store",
+          "sku": "UN.37QSI.005",
+          "price": 79999,
+          "mrp": null,
+          "inStock": true,
+          "stock": "IN_STOCK",
+          "checkedAt": "2026-10-24",
+          "sourceUrl": "https://store.acer.com/en-in/acer-swift-neo-intel-core-ultra-5-processor-125h-windows-11-home-ms-office-16-gb-ram-512gb-ssd-14-0-35-56-cm-display-steel-gray-sfn14-55-1-25-kg-thin-and-light-laptop",
+          "canonicalUrl": "https://store.acer.com/en-in/acer-swift-neo-intel-core-ultra-5-processor-125h-windows-11-home-ms-office-16-gb-ram-512gb-ssd-14-0-35-56-cm-display-steel-gray-sfn14-55-1-25-kg-thin-and-light-laptop",
+          "exactSkuMatch": true,
+          "configurationVerified": true,
+          "linkStatus": "VERIFIED",
+          "linkCheckedAt": "2026-10-24",
+          "httpStatus": 200,
+          "checkedFields": [
+            "sku",
+            "cpu",
+            "memory",
+            "storage",
+            "display",
+            "price",
+            "stock"
+          ],
+          "region": "India",
+          "offerType": "ONLINE",
+          "linkNote": "Observed on the exact product page. No bank/card/coupon discount applied; checkout availability is not guaranteed."
+        }
+      ],
+      "history": [
+        {
+          "observedAt": "2026-10-24",
+          "retailer": "Acer India Store",
+          "sku": "UN.37QSI.005",
+          "price": 79999,
+          "sourceUrl": "https://store.acer.com/en-in/acer-swift-neo-intel-core-ultra-5-processor-125h-windows-11-home-ms-office-16-gb-ram-512gb-ssd-14-0-35-56-cm-display-steel-gray-sfn14-55-1-25-kg-thin-and-light-laptop",
+          "stock": "IN_STOCK"
+        }
+      ]
+    }
+  },
+  {
+    "laptop": {
+      "id": "lap_acer_un_38gsi_006",
+      "brand": "Acer",
+      "family": "Swift Neo",
+      "modelName": "Swift Neo SFN14-56 — Ultra 7 256V / 16GB / 512GB",
+      "pn": "UN.38GSI.006",
+      "cpu": "Intel Core Ultra 7 256V",
+      "gpu": "Intel Arc Graphics",
+      "vram": null,
+      "tgp": null,
+      "gpuTier": 0,
+      "os": "Windows 11 Home",
+      "ram": "16GB",
+      "ramGB": 16,
+      "ramType": "LPDDR5X",
+      "ramSoldered": true,
+      "ssd": "512GB PCIe NVMe SSD",
+      "storageSlots": null,
+      "ssdUpgradeable": null,
+      "dispSize": 14,
+      "res": "1920 × 1200",
+      "refreshHz": null,
+      "panelType": "IPS",
+      "oled": false,
+      "touch": null,
+      "twoInOne": null,
+      "brightness": 300,
+      "colorCoverage": null,
+      "batteryWh": null,
+      "weight": 1.25,
+      "ports": null,
+      "wifi": null,
+      "webcam": null,
+      "warranty": null,
+      "strengths": [
+        "1.25kg weight listed for this exact SKU.",
+        "IPS display with 16:10 resolution."
+      ],
+      "downsides": [
+        "Integrated graphics; no discrete gaming GPU is listed.",
+        "Onboard memory is listed; do not assume a RAM upgrade slot."
+      ],
+      "categoryTags": [
+        "Students",
+        "Office"
+      ],
+      "exact": true,
+      "generationStatus": null,
+      "catalogueStatus": "SOURCED",
+      "recordStatus": "PRODUCT_PAGE_CHECKED",
+      "specSource": "https://store.acer.com/en-in/acer-swift-neo-intel-core-ultra-7-processor-256v-windows-11-home-ms-office-16-gb-ram-512-gb-ssd-14-0-35-56-cm-display-gray-sfn14-56-fingerprint-reader-1-25-kg-thin-and-light-laptop",
+      "specCheckedAt": "2026-10-24",
+      "specSourceNote": "Exact India store product page read 24 October 2026. Unknown fields remain null. No independent performance or battery benchmark was checked.",
+      "evidenceConfidence": "Exact SKU, configuration, displayed price and stock text observed on the linked store page; checkout not attempted.",
+      "scores": {},
+      "rankingStatus": "NOT_BENCHMARKED"
+    },
+    "priceRecord": {
+      "verifiedAt": "2026-10-24",
+      "offers": [
+        {
+          "retailer": "Acer India Store",
+          "sku": "UN.38GSI.006",
+          "price": 82999,
+          "mrp": null,
+          "inStock": true,
+          "stock": "IN_STOCK",
+          "checkedAt": "2026-10-24",
+          "sourceUrl": "https://store.acer.com/en-in/acer-swift-neo-intel-core-ultra-7-processor-256v-windows-11-home-ms-office-16-gb-ram-512-gb-ssd-14-0-35-56-cm-display-gray-sfn14-56-fingerprint-reader-1-25-kg-thin-and-light-laptop",
+          "canonicalUrl": "https://store.acer.com/en-in/acer-swift-neo-intel-core-ultra-7-processor-256v-windows-11-home-ms-office-16-gb-ram-512-gb-ssd-14-0-35-56-cm-display-gray-sfn14-56-fingerprint-reader-1-25-kg-thin-and-light-laptop",
+          "exactSkuMatch": true,
+          "configurationVerified": true,
+          "linkStatus": "VERIFIED",
+          "linkCheckedAt": "2026-10-24",
+          "httpStatus": 200,
+          "checkedFields": [
+            "sku",
+            "cpu",
+            "memory",
+            "storage",
+            "display",
+            "price",
+            "stock"
+          ],
+          "region": "India",
+          "offerType": "ONLINE",
+          "linkNote": "Observed on the exact product page. No bank/card/coupon discount applied; checkout availability is not guaranteed."
+        }
+      ],
+      "history": [
+        {
+          "observedAt": "2026-10-24",
+          "retailer": "Acer India Store",
+          "sku": "UN.38GSI.006",
+          "price": 82999,
+          "sourceUrl": "https://store.acer.com/en-in/acer-swift-neo-intel-core-ultra-7-processor-256v-windows-11-home-ms-office-16-gb-ram-512-gb-ssd-14-0-35-56-cm-display-gray-sfn14-56-fingerprint-reader-1-25-kg-thin-and-light-laptop",
+          "stock": "IN_STOCK"
+        }
+      ]
+    }
+  },
+  {
+    "laptop": {
+      "id": "lap_acer_un_37rsi_003",
+      "brand": "Acer",
+      "family": "Aspire 5",
+      "modelName": "Aspire 5 A514-55 — Ultra 5 226V / 16GB / 512GB",
+      "pn": "UN.37RSI.003",
+      "cpu": "Intel Core Ultra 5 226V",
+      "gpu": "Intel UHD Graphics (store description)",
+      "vram": null,
+      "tgp": null,
+      "gpuTier": 0,
+      "os": "Windows 11 Home",
+      "ram": "16GB",
+      "ramGB": 16,
+      "ramType": "LPDDR5X",
+      "ramSoldered": true,
+      "ssd": "512GB PCIe NVMe SSD",
+      "storageSlots": null,
+      "ssdUpgradeable": null,
+      "dispSize": 14,
+      "res": "1920 × 1200",
+      "refreshHz": null,
+      "panelType": "IPS",
+      "oled": false,
+      "touch": null,
+      "twoInOne": null,
+      "brightness": null,
+      "colorCoverage": null,
+      "batteryWh": null,
+      "weight": 1.2,
+      "ports": null,
+      "wifi": null,
+      "webcam": null,
+      "warranty": null,
+      "strengths": [
+        "1.2kg weight listed for this exact SKU.",
+        "IPS display with 16:10 resolution."
+      ],
+      "downsides": [
+        "The store lists UHD graphics for this 226V SKU; confirm the GPU description before purchase.",
+        "Integrated graphics; no discrete gaming GPU is listed.",
+        "Onboard memory is listed; do not assume a RAM upgrade slot."
+      ],
+      "categoryTags": [
+        "Students",
+        "Office"
+      ],
+      "exact": true,
+      "generationStatus": null,
+      "catalogueStatus": "SOURCED",
+      "recordStatus": "PRODUCT_PAGE_CHECKED",
+      "specSource": "https://store.acer.com/en-in/acer-aspire-5-intel-core-ultra-5-226v-processors-windows-11-home-ms-office-16-gb-ram-512-gb-ssd-14-35-56-cm-display-pure-silver-a514-55-1-2-kg-thin-and-light-laptop",
+      "specCheckedAt": "2026-10-24",
+      "specSourceNote": "Exact India store product page read 24 October 2026. Unknown fields remain null. No independent performance or battery benchmark was checked.",
+      "evidenceConfidence": "Exact SKU, configuration, displayed price and stock text observed on the linked store page; checkout not attempted.",
+      "scores": {},
+      "rankingStatus": "NOT_BENCHMARKED"
+    },
+    "priceRecord": {
+      "verifiedAt": "2026-10-24",
+      "offers": [
+        {
+          "retailer": "Acer India Store",
+          "sku": "UN.37RSI.003",
+          "price": 84999,
+          "mrp": null,
+          "inStock": true,
+          "stock": "IN_STOCK",
+          "checkedAt": "2026-10-24",
+          "sourceUrl": "https://store.acer.com/en-in/acer-aspire-5-intel-core-ultra-5-226v-processors-windows-11-home-ms-office-16-gb-ram-512-gb-ssd-14-35-56-cm-display-pure-silver-a514-55-1-2-kg-thin-and-light-laptop",
+          "canonicalUrl": "https://store.acer.com/en-in/acer-aspire-5-intel-core-ultra-5-226v-processors-windows-11-home-ms-office-16-gb-ram-512-gb-ssd-14-35-56-cm-display-pure-silver-a514-55-1-2-kg-thin-and-light-laptop",
+          "exactSkuMatch": true,
+          "configurationVerified": true,
+          "linkStatus": "VERIFIED",
+          "linkCheckedAt": "2026-10-24",
+          "httpStatus": 200,
+          "checkedFields": [
+            "sku",
+            "cpu",
+            "memory",
+            "storage",
+            "display",
+            "price",
+            "stock"
+          ],
+          "region": "India",
+          "offerType": "ONLINE",
+          "linkNote": "Observed on the exact product page. No bank/card/coupon discount applied; checkout availability is not guaranteed."
+        }
+      ],
+      "history": [
+        {
+          "observedAt": "2026-10-24",
+          "retailer": "Acer India Store",
+          "sku": "UN.37RSI.003",
+          "price": 84999,
+          "sourceUrl": "https://store.acer.com/en-in/acer-aspire-5-intel-core-ultra-5-226v-processors-windows-11-home-ms-office-16-gb-ram-512-gb-ssd-14-35-56-cm-display-pure-silver-a514-55-1-2-kg-thin-and-light-laptop",
+          "stock": "IN_STOCK"
+        }
+      ]
+    }
+  },
+  {
+    "laptop": {
+      "id": "lap_acer_un_37tsi_008",
+      "brand": "Acer",
+      "family": "Swift Pro",
+      "modelName": "Swift Pro SFP14-55 — Ultra 5 125H / 16GB / 512GB",
+      "pn": "UN.37TSI.008",
+      "cpu": "Intel Core Ultra 5 125H",
+      "gpu": "Intel Arc Graphics",
+      "vram": null,
+      "tgp": null,
+      "gpuTier": 0,
+      "os": "Windows 11 Home",
+      "ram": "16GB",
+      "ramGB": 16,
+      "ramType": "LPDDR5",
+      "ramSoldered": true,
+      "ssd": "512GB PCIe NVMe SSD",
+      "storageSlots": null,
+      "ssdUpgradeable": null,
+      "dispSize": 14,
+      "res": "1920 × 1200",
+      "refreshHz": null,
+      "panelType": "OLED",
+      "oled": true,
+      "touch": null,
+      "twoInOne": null,
+      "brightness": 400,
+      "colorCoverage": "100% sRGB (store specification)",
+      "batteryWh": null,
+      "weight": 1.2,
+      "ports": null,
+      "wifi": null,
+      "webcam": null,
+      "warranty": null,
+      "strengths": [
+        "1.2kg weight listed for this exact SKU.",
+        "OLED display with 16:10 resolution."
+      ],
+      "downsides": [
+        "Integrated graphics; no discrete gaming GPU is listed.",
+        "Onboard memory is listed; do not assume a RAM upgrade slot."
+      ],
+      "categoryTags": [
+        "Students",
+        "Office"
+      ],
+      "exact": true,
+      "generationStatus": null,
+      "catalogueStatus": "SOURCED",
+      "recordStatus": "PRODUCT_PAGE_CHECKED",
+      "specSource": "https://store.acer.com/en-in/acer-swift-pro-intel-core-ultra-5-processor-125h-windows-11-home-ms-office-16-gb-ram-512-gb-ssd-14-0-35-56-cm-display-oled-fingerprint-reader-light-blue-sfp14-55-1-2-kg-thin-and-light-laptop",
+      "specCheckedAt": "2026-10-24",
+      "specSourceNote": "Exact India store product page read 24 October 2026. Unknown fields remain null. No independent performance or battery benchmark was checked.",
+      "evidenceConfidence": "Exact SKU, configuration, displayed price and stock text observed on the linked store page; checkout not attempted.",
+      "scores": {},
+      "rankingStatus": "NOT_BENCHMARKED"
+    },
+    "priceRecord": {
+      "verifiedAt": "2026-10-24",
+      "offers": [
+        {
+          "retailer": "Acer India Store",
+          "sku": "UN.37TSI.008",
+          "price": 84999,
+          "mrp": null,
+          "inStock": true,
+          "stock": "IN_STOCK",
+          "checkedAt": "2026-10-24",
+          "sourceUrl": "https://store.acer.com/en-in/acer-swift-pro-intel-core-ultra-5-processor-125h-windows-11-home-ms-office-16-gb-ram-512-gb-ssd-14-0-35-56-cm-display-oled-fingerprint-reader-light-blue-sfp14-55-1-2-kg-thin-and-light-laptop",
+          "canonicalUrl": "https://store.acer.com/en-in/acer-swift-pro-intel-core-ultra-5-processor-125h-windows-11-home-ms-office-16-gb-ram-512-gb-ssd-14-0-35-56-cm-display-oled-fingerprint-reader-light-blue-sfp14-55-1-2-kg-thin-and-light-laptop",
+          "exactSkuMatch": true,
+          "configurationVerified": true,
+          "linkStatus": "VERIFIED",
+          "linkCheckedAt": "2026-10-24",
+          "httpStatus": 200,
+          "checkedFields": [
+            "sku",
+            "cpu",
+            "memory",
+            "storage",
+            "display",
+            "price",
+            "stock"
+          ],
+          "region": "India",
+          "offerType": "ONLINE",
+          "linkNote": "Observed on the exact product page. No bank/card/coupon discount applied; checkout availability is not guaranteed."
+        }
+      ],
+      "history": [
+        {
+          "observedAt": "2026-10-24",
+          "retailer": "Acer India Store",
+          "sku": "UN.37TSI.008",
+          "price": 84999,
+          "sourceUrl": "https://store.acer.com/en-in/acer-swift-pro-intel-core-ultra-5-processor-125h-windows-11-home-ms-office-16-gb-ram-512-gb-ssd-14-0-35-56-cm-display-oled-fingerprint-reader-light-blue-sfp14-55-1-2-kg-thin-and-light-laptop",
+          "stock": "IN_STOCK"
+        }
+      ]
+    }
+  },
+  {
+    "laptop": {
+      "id": "lap_asus_x1607ca_mb350ws",
+      "brand": "ASUS",
+      "family": "Vivobook 16",
+      "modelName": "Vivobook 16 X1607CA-MB350WS — Ultra 5 225H / 16GB / 512GB",
+      "pn": "X1607CA-MB350WS",
+      "cpu": "Intel Core Ultra 5 225H",
+      "gpu": "Intel Graphics",
+      "vram": null,
+      "tgp": null,
+      "gpuTier": 0,
+      "os": "Windows 11 Home",
+      "ram": "16GB DDR5 onboard + SO-DIMM expansion",
+      "ramGB": 16,
+      "ramType": "DDR5",
+      "ramSoldered": null,
+      "ssd": "512GB PCIe 4.0 NVMe SSD",
+      "storageSlots": 1,
+      "ssdUpgradeable": true,
+      "dispSize": 16,
+      "res": "1920 × 1200",
+      "refreshHz": 60,
+      "panelType": "IPS",
+      "oled": false,
+      "touch": null,
+      "twoInOne": null,
+      "brightness": 300,
+      "colorCoverage": null,
+      "batteryWh": null,
+      "weight": 1.88,
+      "ports": null,
+      "wifi": null,
+      "webcam": "FHD IR camera with privacy shutter",
+      "warranty": null,
+      "strengths": [
+        "16-inch 16:10 display.",
+        "Store lists a DDR5 SO-DIMM slot and memory expansion up to 32GB."
+      ],
+      "downsides": [
+        "60Hz display; no discrete gaming GPU is listed."
+      ],
+      "categoryTags": [
+        "Students",
+        "Office"
+      ],
+      "exact": true,
+      "generationStatus": null,
+      "catalogueStatus": "SOURCED",
+      "recordStatus": "PRICE_NOT_VERIFIED",
+      "specSource": "https://in.store.asus.com/ai-powered-light-weight-laptop-asus-vivobook-16-x1607ca-mb350ws.html",
+      "specCheckedAt": "2026-10-24",
+      "specSourceNote": "Exact India product page read 24 October 2026. Displayed price ₹88,990; stock was not unambiguously confirmed, so this is not a buyable offer.",
+      "scores": {},
+      "rankingStatus": "NOT_BENCHMARKED"
+    },
+    "priceRecord": {
+      "verifiedAt": "2026-10-24",
+      "offers": [
+        {
+          "retailer": "ASUS India Store",
+          "sku": "X1607CA-MB350WS",
+          "price": 88990,
+          "inStock": null,
+          "stock": "NOT_CONFIRMED",
+          "checkedAt": "2026-10-24",
+          "sourceUrl": "https://in.store.asus.com/ai-powered-light-weight-laptop-asus-vivobook-16-x1607ca-mb350ws.html",
+          "canonicalUrl": "https://in.store.asus.com/ai-powered-light-weight-laptop-asus-vivobook-16-x1607ca-mb350ws.html",
+          "exactSkuMatch": true,
+          "configurationVerified": true,
+          "linkStatus": "VERIFIED",
+          "linkCheckedAt": "2026-10-24",
+          "httpStatus": 200,
+          "region": "India",
+          "offerType": "ONLINE",
+          "checkedFields": [
+            "sku",
+            "cpu",
+            "memory",
+            "storage",
+            "display",
+            "price"
+          ],
+          "linkNote": "Product price was displayed, but stock was not clearly confirmed. No buyable offer is claimed."
+        }
+      ],
+      "history": []
+    }
+  }
+]
