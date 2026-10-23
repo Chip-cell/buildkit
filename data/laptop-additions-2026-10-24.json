@@ -802,5 +802,1204 @@
       ],
       "history": []
     }
+  },
+  {
+    "laptop": {
+      "id": "lap_asus_fx608jmi_tu251ws",
+      "brand": "ASUS",
+      "family": "TUF Gaming F16",
+      "modelName": "TUF Gaming F16 FX608JMI-TU251WS — i7-14650HX / RTX 5060 / 16GB / 1TB",
+      "pn": "FX608JMI-TU251WS",
+      "cpu": "Intel Core i7-14650HX",
+      "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "vram": 8,
+      "tgp": 115,
+      "gpuTier": 3,
+      "os": "Windows 11 Home",
+      "ram": "16GB",
+      "ramGB": 16,
+      "ramType": "DDR5-5600",
+      "ramSoldered": false,
+      "ssd": "1TB PCIe 4.0 NVMe SSD",
+      "storageSlots": null,
+      "ssdUpgradeable": true,
+      "dispSize": 16,
+      "res": "1920 × 1200",
+      "refreshHz": 144,
+      "panelType": "IPS-level",
+      "oled": false,
+      "touch": null,
+      "twoInOne": null,
+      "brightness": 300,
+      "colorCoverage": null,
+      "batteryWh": 70,
+      "weight": 2.2,
+      "ports": null,
+      "wifi": null,
+      "webcam": null,
+      "warranty": null,
+      "strengths": [
+        "115W maximum GPU power is stated for this exact configuration.",
+        "Two SO-DIMM slots and memory expansion up to 64GB are listed."
+      ],
+      "downsides": [
+        "2.2kg before the charger; measured runtime and noise were not checked."
+      ],
+      "categoryTags": [
+        "Gaming"
+      ],
+      "exact": true,
+      "generationStatus": null,
+      "catalogueStatus": "SOURCED",
+      "recordStatus": "PRICE_NOT_VERIFIED",
+      "specSource": "https://in.store.asus.com/gaming-laptop-asus-tuf-gaming-f16-fx608jmi-tu251ws.html",
+      "specCheckedAt": "2026-10-24",
+      "specSourceNote": "Exact India store product page read 24 October 2026. Unknown fields remain unknown; no independent performance or battery-life test was checked.",
+      "evidenceConfidence": "Exact model number and listed configuration observed on the linked first-party store page.",
+      "scores": {},
+      "rankingStatus": "NOT_BENCHMARKED"
+    },
+    "priceRecord": {
+      "verifiedAt": "2026-10-24",
+      "offers": [
+        {
+          "retailer": "ASUS India Store",
+          "sku": "FX608JMI-TU251WS",
+          "price": 209990,
+          "inStock": null,
+          "stock": "NOT_CONFIRMED",
+          "checkedAt": "2026-10-24",
+          "sourceUrl": "https://in.store.asus.com/gaming-laptop-asus-tuf-gaming-f16-fx608jmi-tu251ws.html",
+          "canonicalUrl": "https://in.store.asus.com/gaming-laptop-asus-tuf-gaming-f16-fx608jmi-tu251ws.html",
+          "exactSkuMatch": true,
+          "configurationVerified": true,
+          "linkStatus": "VERIFIED",
+          "linkCheckedAt": "2026-10-24",
+          "httpStatus": 200,
+          "region": "India",
+          "offerType": "ONLINE",
+          "checkedFields": [
+            "sku",
+            "cpu",
+            "gpu",
+            "memory",
+            "storage",
+            "display",
+            "price"
+          ],
+          "linkNote": "Displayed base selling price; excludes card discounts, coupons, delivery and checkout verification. Stock was not unambiguously confirmed."
+        }
+      ],
+      "history": [
+        {
+          "observedAt": "2026-10-24",
+          "retailer": "ASUS India Store",
+          "sku": "FX608JMI-TU251WS",
+          "price": 209990,
+          "sourceUrl": "https://in.store.asus.com/gaming-laptop-asus-tuf-gaming-f16-fx608jmi-tu251ws.html",
+          "stock": "NOT_CONFIRMED"
+        }
+      ]
+    }
+  },
+  {
+    "laptop": {
+      "id": "lap_asus_fx610jm_tu105ws",
+      "brand": "ASUS",
+      "family": "TUF Gaming 16",
+      "modelName": "TUF Gaming 16 FX610JM-TU105WS — i7-14650HX / RTX 5060 / 16GB / 512GB",
+      "pn": "FX610JM-TU105WS",
+      "cpu": "Intel Core i7-14650HX",
+      "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "vram": 8,
+      "tgp": 85,
+      "gpuTier": 3,
+      "os": "Windows 11 Home",
+      "ram": "16GB",
+      "ramGB": 16,
+      "ramType": "DDR5-5600",
+      "ramSoldered": false,
+      "ssd": "512GB PCIe 4.0 NVMe SSD",
+      "storageSlots": null,
+      "ssdUpgradeable": null,
+      "dispSize": 16,
+      "res": "1920 × 1200",
+      "refreshHz": 144,
+      "panelType": "IPS-level",
+      "oled": false,
+      "touch": null,
+      "twoInOne": null,
+      "brightness": 300,
+      "colorCoverage": null,
+      "batteryWh": 63,
+      "weight": 2.2,
+      "ports": null,
+      "wifi": null,
+      "webcam": null,
+      "warranty": null,
+      "strengths": [
+        "85W maximum GPU power is stated for this exact configuration.",
+        "Two SO-DIMM slots and memory expansion up to 64GB are listed."
+      ],
+      "downsides": [
+        "The listed 85W GPU power limit differs from other RTX 5060 configurations."
+      ],
+      "categoryTags": [
+        "Gaming"
+      ],
+      "exact": true,
+      "generationStatus": null,
+      "catalogueStatus": "SOURCED",
+      "recordStatus": "PRICE_NOT_VERIFIED",
+      "specSource": "https://in.store.asus.com/gaming-laptop-asus-tuf-gaming-16-fx610jm-tu105ws.html",
+      "specCheckedAt": "2026-10-24",
+      "specSourceNote": "Exact India store product page read 24 October 2026. Unknown fields remain unknown; no independent performance or battery-life test was checked.",
+      "evidenceConfidence": "Exact model number and listed configuration observed on the linked first-party store page.",
+      "scores": {},
+      "rankingStatus": "NOT_BENCHMARKED"
+    },
+    "priceRecord": {
+      "verifiedAt": "2026-10-24",
+      "offers": [
+        {
+          "retailer": "ASUS India Store",
+          "sku": "FX610JM-TU105WS",
+          "price": 209990,
+          "inStock": null,
+          "stock": "NOT_CONFIRMED",
+          "checkedAt": "2026-10-24",
+          "sourceUrl": "https://in.store.asus.com/gaming-laptop-asus-tuf-gaming-16-fx610jm-tu105ws.html",
+          "canonicalUrl": "https://in.store.asus.com/gaming-laptop-asus-tuf-gaming-16-fx610jm-tu105ws.html",
+          "exactSkuMatch": true,
+          "configurationVerified": true,
+          "linkStatus": "VERIFIED",
+          "linkCheckedAt": "2026-10-24",
+          "httpStatus": 200,
+          "region": "India",
+          "offerType": "ONLINE",
+          "checkedFields": [
+            "sku",
+            "cpu",
+            "gpu",
+            "memory",
+            "storage",
+            "display",
+            "price"
+          ],
+          "linkNote": "Displayed base selling price; excludes card discounts, coupons, delivery and checkout verification. Stock was not unambiguously confirmed."
+        }
+      ],
+      "history": [
+        {
+          "observedAt": "2026-10-24",
+          "retailer": "ASUS India Store",
+          "sku": "FX610JM-TU105WS",
+          "price": 209990,
+          "sourceUrl": "https://in.store.asus.com/gaming-laptop-asus-tuf-gaming-16-fx610jm-tu105ws.html",
+          "stock": "NOT_CONFIRMED"
+        }
+      ]
+    }
+  },
+  {
+    "laptop": {
+      "id": "lap_asus_ga403um_qs007ws",
+      "brand": "ASUS",
+      "family": "ROG Zephyrus G14",
+      "modelName": "ROG Zephyrus G14 GA403UM-QS007WS — Ryzen 9 270 / RTX 5060 / 16GB / 1TB",
+      "pn": "GA403UM-QS007WS",
+      "cpu": "AMD Ryzen 9 270",
+      "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "vram": 8,
+      "tgp": 90,
+      "gpuTier": 3,
+      "os": "Windows 11 Home",
+      "ram": "16GB",
+      "ramGB": 16,
+      "ramType": "LPDDR5X-7500",
+      "ramSoldered": true,
+      "ssd": "1TB PCIe 4.0 NVMe SSD (2230)",
+      "storageSlots": null,
+      "ssdUpgradeable": null,
+      "dispSize": 14,
+      "res": "2880 × 1800",
+      "refreshHz": 120,
+      "panelType": "OLED",
+      "oled": true,
+      "touch": null,
+      "twoInOne": null,
+      "brightness": 500,
+      "colorCoverage": null,
+      "batteryWh": 73,
+      "weight": 1.5,
+      "ports": null,
+      "wifi": null,
+      "webcam": null,
+      "warranty": null,
+      "strengths": [
+        "14-inch 120Hz OLED display; 1.5kg listed weight.",
+        "90W maximum GPU power is stated for this exact configuration."
+      ],
+      "downsides": [
+        "16GB memory is onboard; no RAM expansion slot is stated."
+      ],
+      "categoryTags": [
+        "Gaming"
+      ],
+      "exact": true,
+      "generationStatus": null,
+      "catalogueStatus": "SOURCED",
+      "recordStatus": "PRICE_NOT_VERIFIED",
+      "specSource": "https://in.store.asus.com/gaming-laptop-rog-zephyrus-g14-ga403um-qs007ws.html",
+      "specCheckedAt": "2026-10-24",
+      "specSourceNote": "Exact India store product page read 24 October 2026. Unknown fields remain unknown; no independent performance or battery-life test was checked.",
+      "evidenceConfidence": "Exact model number and listed configuration observed on the linked first-party store page.",
+      "scores": {},
+      "rankingStatus": "NOT_BENCHMARKED"
+    },
+    "priceRecord": {
+      "verifiedAt": "2026-10-24",
+      "offers": [
+        {
+          "retailer": "ASUS India Store",
+          "sku": "GA403UM-QS007WS",
+          "price": 199990,
+          "inStock": null,
+          "stock": "NOT_CONFIRMED",
+          "checkedAt": "2026-10-24",
+          "sourceUrl": "https://in.store.asus.com/gaming-laptop-rog-zephyrus-g14-ga403um-qs007ws.html",
+          "canonicalUrl": "https://in.store.asus.com/gaming-laptop-rog-zephyrus-g14-ga403um-qs007ws.html",
+          "exactSkuMatch": true,
+          "configurationVerified": true,
+          "linkStatus": "VERIFIED",
+          "linkCheckedAt": "2026-10-24",
+          "httpStatus": 200,
+          "region": "India",
+          "offerType": "ONLINE",
+          "checkedFields": [
+            "sku",
+            "cpu",
+            "gpu",
+            "memory",
+            "storage",
+            "display",
+            "price"
+          ],
+          "linkNote": "Displayed base selling price; excludes card discounts, coupons, delivery and checkout verification. Stock was not unambiguously confirmed."
+        }
+      ],
+      "history": [
+        {
+          "observedAt": "2026-10-24",
+          "retailer": "ASUS India Store",
+          "sku": "GA403UM-QS007WS",
+          "price": 199990,
+          "sourceUrl": "https://in.store.asus.com/gaming-laptop-rog-zephyrus-g14-ga403um-qs007ws.html",
+          "stock": "NOT_CONFIRMED"
+        }
+      ]
+    }
+  },
+  {
+    "laptop": {
+      "id": "lap_asus_h7606ww_se023ws",
+      "brand": "ASUS",
+      "family": "ProArt P16",
+      "modelName": "ProArt P16 H7606WW-SE023WS — Ryzen AI 9 HX 370 / RTX 5080 / 64GB / 2TB",
+      "pn": "H7606WW-SE023WS",
+      "cpu": "AMD Ryzen AI 9 HX 370",
+      "gpu": "NVIDIA GeForce RTX 5080 Laptop GPU",
+      "vram": 16,
+      "tgp": null,
+      "gpuTier": 4,
+      "os": "Windows 11 Home",
+      "ram": "64GB",
+      "ramGB": 64,
+      "ramType": "LPDDR5X",
+      "ramSoldered": true,
+      "ssd": "2TB PCIe 4.0 NVMe SSD",
+      "storageSlots": null,
+      "ssdUpgradeable": null,
+      "dispSize": 16,
+      "res": "3840 × 2400",
+      "refreshHz": 120,
+      "panelType": "OLED",
+      "oled": true,
+      "touch": true,
+      "twoInOne": null,
+      "brightness": null,
+      "colorCoverage": null,
+      "batteryWh": 90,
+      "weight": 1.95,
+      "ports": null,
+      "wifi": null,
+      "webcam": null,
+      "warranty": null,
+      "strengths": [
+        "64GB onboard memory and 2TB storage are listed.",
+        "16-inch 120Hz OLED touch display with stylus support."
+      ],
+      "downsides": [
+        "GPU power was not confirmed. The quoted 1600-nit figure is HDR peak, not a confirmed sustained SDR brightness."
+      ],
+      "categoryTags": [
+        "Creator"
+      ],
+      "exact": true,
+      "generationStatus": null,
+      "catalogueStatus": "SOURCED",
+      "recordStatus": "PRICE_NOT_VERIFIED",
+      "specSource": "https://in.store.asus.com/creator-laptop-asus-proart-px16-h7606.html",
+      "specCheckedAt": "2026-10-24",
+      "specSourceNote": "Exact India store product page read 24 October 2026. Unknown fields remain unknown; no independent performance or battery-life test was checked.",
+      "evidenceConfidence": "Exact model number and listed configuration observed on the linked first-party store page.",
+      "scores": {},
+      "rankingStatus": "NOT_BENCHMARKED"
+    },
+    "priceRecord": {
+      "verifiedAt": "2026-10-24",
+      "offers": [
+        {
+          "retailer": "ASUS India Store",
+          "sku": "H7606WW-SE023WS",
+          "price": 439990,
+          "inStock": null,
+          "stock": "NOT_CONFIRMED",
+          "checkedAt": "2026-10-24",
+          "sourceUrl": "https://in.store.asus.com/creator-laptop-asus-proart-px16-h7606.html",
+          "canonicalUrl": "https://in.store.asus.com/creator-laptop-asus-proart-px16-h7606.html",
+          "exactSkuMatch": true,
+          "configurationVerified": true,
+          "linkStatus": "VERIFIED",
+          "linkCheckedAt": "2026-10-24",
+          "httpStatus": 200,
+          "region": "India",
+          "offerType": "ONLINE",
+          "checkedFields": [
+            "sku",
+            "cpu",
+            "gpu",
+            "memory",
+            "storage",
+            "display",
+            "price"
+          ],
+          "linkNote": "Displayed base selling price; excludes card discounts, coupons, delivery and checkout verification. Stock was not unambiguously confirmed."
+        }
+      ],
+      "history": [
+        {
+          "observedAt": "2026-10-24",
+          "retailer": "ASUS India Store",
+          "sku": "H7606WW-SE023WS",
+          "price": 439990,
+          "sourceUrl": "https://in.store.asus.com/creator-laptop-asus-proart-px16-h7606.html",
+          "stock": "NOT_CONFIRMED"
+        }
+      ]
+    }
+  },
+  {
+    "laptop": {
+      "id": "lap_acer_un_u7csi_007",
+      "brand": "Acer",
+      "family": "Nitro 5",
+      "modelName": "Nitro 5 AN516-73G1 — i5-14450HX / RTX 4050 / 16GB / 1TB",
+      "pn": "UN.U7CSI.007",
+      "cpu": "Intel Core i5-14450HX",
+      "gpu": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "vram": 6,
+      "tgp": null,
+      "gpuTier": 2,
+      "os": "Windows 11 Home",
+      "ram": "16GB",
+      "ramGB": 16,
+      "ramType": "DDR5",
+      "ramSoldered": false,
+      "ssd": "1TB PCIe SSD",
+      "storageSlots": null,
+      "ssdUpgradeable": true,
+      "dispSize": 16,
+      "res": "1920 × 1200",
+      "refreshHz": 165,
+      "panelType": "IPS",
+      "oled": false,
+      "touch": null,
+      "twoInOne": null,
+      "brightness": null,
+      "colorCoverage": null,
+      "batteryWh": null,
+      "weight": 2.5,
+      "ports": null,
+      "wifi": null,
+      "webcam": null,
+      "warranty": null,
+      "strengths": [
+        "16-inch 165Hz IPS display.",
+        "Memory expansion up to 32GB and SSD expansion up to 2TB are listed."
+      ],
+      "downsides": [
+        "The retailer describes the RTX 4050 memory as GDDR7; confirm that conflicting specification with Acer.",
+        "GPU power and measured battery life were not confirmed."
+      ],
+      "categoryTags": [
+        "Gaming"
+      ],
+      "exact": true,
+      "generationStatus": null,
+      "catalogueStatus": "SOURCED",
+      "recordStatus": "PRODUCT_PAGE_CHECKED",
+      "specSource": "https://store.acer.com/en-in/acer-nitro-5-gaming-laptop-intel-core-i5-14450hx-nvidia-geforce-rtx-4050-6-gb-gddr7-16-gb-ram-1tb-ssd-fhd-16-40-64-cm-165hz-windows-11-home-ms-office-herald-gray-2-5kg-an516-73g1-rgb-keyboard",
+      "specCheckedAt": "2026-10-24",
+      "specSourceNote": "Exact India store product page read 24 October 2026. Unknown fields remain unknown; no independent performance or battery-life test was checked.",
+      "evidenceConfidence": "Exact model number and listed configuration observed on the linked first-party store page.",
+      "scores": {},
+      "rankingStatus": "NOT_BENCHMARKED"
+    },
+    "priceRecord": {
+      "verifiedAt": "2026-10-24",
+      "offers": [
+        {
+          "retailer": "Acer India Store",
+          "sku": "UN.U7CSI.007",
+          "price": 144990,
+          "inStock": true,
+          "stock": "IN_STOCK",
+          "checkedAt": "2026-10-24",
+          "sourceUrl": "https://store.acer.com/en-in/acer-nitro-5-gaming-laptop-intel-core-i5-14450hx-nvidia-geforce-rtx-4050-6-gb-gddr7-16-gb-ram-1tb-ssd-fhd-16-40-64-cm-165hz-windows-11-home-ms-office-herald-gray-2-5kg-an516-73g1-rgb-keyboard",
+          "canonicalUrl": "https://store.acer.com/en-in/acer-nitro-5-gaming-laptop-intel-core-i5-14450hx-nvidia-geforce-rtx-4050-6-gb-gddr7-16-gb-ram-1tb-ssd-fhd-16-40-64-cm-165hz-windows-11-home-ms-office-herald-gray-2-5kg-an516-73g1-rgb-keyboard",
+          "exactSkuMatch": true,
+          "configurationVerified": true,
+          "linkStatus": "VERIFIED",
+          "linkCheckedAt": "2026-10-24",
+          "httpStatus": 200,
+          "region": "India",
+          "offerType": "ONLINE",
+          "checkedFields": [
+            "sku",
+            "cpu",
+            "gpu",
+            "memory",
+            "storage",
+            "display",
+            "price",
+            "stock"
+          ],
+          "linkNote": "Displayed base selling price; excludes card discounts, coupons, delivery and checkout verification. Stock text observed on the product page."
+        }
+      ],
+      "history": [
+        {
+          "observedAt": "2026-10-24",
+          "retailer": "Acer India Store",
+          "sku": "UN.U7CSI.007",
+          "price": 144990,
+          "sourceUrl": "https://store.acer.com/en-in/acer-nitro-5-gaming-laptop-intel-core-i5-14450hx-nvidia-geforce-rtx-4050-6-gb-gddr7-16-gb-ram-1tb-ssd-fhd-16-40-64-cm-165hz-windows-11-home-ms-office-herald-gray-2-5kg-an516-73g1-rgb-keyboard",
+          "stock": "IN_STOCK"
+        }
+      ]
+    }
+  },
+  {
+    "laptop": {
+      "id": "lap_acer_un_u7psi_008",
+      "brand": "Acer",
+      "family": "Nitro 5",
+      "modelName": "Nitro 5 AN516-74G1 — i7-14650HX / RTX 5050 / 16GB / 1TB",
+      "pn": "UN.U7PSI.008",
+      "cpu": "Intel Core i7-14650HX",
+      "gpu": "NVIDIA GeForce RTX 5050 Laptop GPU",
+      "vram": 8,
+      "tgp": null,
+      "gpuTier": 3,
+      "os": "Windows 11 Home",
+      "ram": "16GB",
+      "ramGB": 16,
+      "ramType": "DDR5",
+      "ramSoldered": false,
+      "ssd": "1TB PCIe SSD",
+      "storageSlots": null,
+      "ssdUpgradeable": true,
+      "dispSize": 16,
+      "res": "1920 × 1200",
+      "refreshHz": 165,
+      "panelType": "IPS",
+      "oled": false,
+      "touch": null,
+      "twoInOne": null,
+      "brightness": null,
+      "colorCoverage": null,
+      "batteryWh": null,
+      "weight": 2.5,
+      "ports": null,
+      "wifi": null,
+      "webcam": null,
+      "warranty": null,
+      "strengths": [
+        "16-inch 165Hz IPS display.",
+        "Memory expansion up to 32GB and SSD expansion up to 2TB are listed."
+      ],
+      "downsides": [
+        "GPU power and measured battery life were not confirmed."
+      ],
+      "categoryTags": [
+        "Gaming"
+      ],
+      "exact": true,
+      "generationStatus": null,
+      "catalogueStatus": "SOURCED",
+      "recordStatus": "PRODUCT_PAGE_CHECKED",
+      "specSource": "https://store.acer.com/en-in/acer-nitro-5-gaming-laptop-intel-core-i7-14650hx-nvidia-geforce-rtx-5050-8-gb-gddr7-16-gb-ram-1tb-ssd-fhd-16-40-64-cm-165hz-windows-11-home-ms-office-dark-gray-2-5kg-an516-74g1-rgb-keyboard",
+      "specCheckedAt": "2026-10-24",
+      "specSourceNote": "Exact India store product page read 24 October 2026. Unknown fields remain unknown; no independent performance or battery-life test was checked.",
+      "evidenceConfidence": "Exact model number and listed configuration observed on the linked first-party store page.",
+      "scores": {},
+      "rankingStatus": "NOT_BENCHMARKED"
+    },
+    "priceRecord": {
+      "verifiedAt": "2026-10-24",
+      "offers": [
+        {
+          "retailer": "Acer India Store",
+          "sku": "UN.U7PSI.008",
+          "price": 164990,
+          "inStock": true,
+          "stock": "IN_STOCK",
+          "checkedAt": "2026-10-24",
+          "sourceUrl": "https://store.acer.com/en-in/acer-nitro-5-gaming-laptop-intel-core-i7-14650hx-nvidia-geforce-rtx-5050-8-gb-gddr7-16-gb-ram-1tb-ssd-fhd-16-40-64-cm-165hz-windows-11-home-ms-office-dark-gray-2-5kg-an516-74g1-rgb-keyboard",
+          "canonicalUrl": "https://store.acer.com/en-in/acer-nitro-5-gaming-laptop-intel-core-i7-14650hx-nvidia-geforce-rtx-5050-8-gb-gddr7-16-gb-ram-1tb-ssd-fhd-16-40-64-cm-165hz-windows-11-home-ms-office-dark-gray-2-5kg-an516-74g1-rgb-keyboard",
+          "exactSkuMatch": true,
+          "configurationVerified": true,
+          "linkStatus": "VERIFIED",
+          "linkCheckedAt": "2026-10-24",
+          "httpStatus": 200,
+          "region": "India",
+          "offerType": "ONLINE",
+          "checkedFields": [
+            "sku",
+            "cpu",
+            "gpu",
+            "memory",
+            "storage",
+            "display",
+            "price",
+            "stock"
+          ],
+          "linkNote": "Displayed base selling price; excludes card discounts, coupons, delivery and checkout verification. Stock text observed on the product page."
+        }
+      ],
+      "history": [
+        {
+          "observedAt": "2026-10-24",
+          "retailer": "Acer India Store",
+          "sku": "UN.U7PSI.008",
+          "price": 164990,
+          "sourceUrl": "https://store.acer.com/en-in/acer-nitro-5-gaming-laptop-intel-core-i7-14650hx-nvidia-geforce-rtx-5050-8-gb-gddr7-16-gb-ram-1tb-ssd-fhd-16-40-64-cm-165hz-windows-11-home-ms-office-dark-gray-2-5kg-an516-74g1-rgb-keyboard",
+          "stock": "IN_STOCK"
+        }
+      ]
+    }
+  },
+  {
+    "laptop": {
+      "id": "lap_acer_un_u7psi_007",
+      "brand": "Acer",
+      "family": "Nitro 5",
+      "modelName": "Nitro 5 AN516-74G1 — i5-14450HX / RTX 5050 / 16GB / 1TB",
+      "pn": "UN.U7PSI.007",
+      "cpu": "Intel Core i5-14450HX",
+      "gpu": "NVIDIA GeForce RTX 5050 Laptop GPU",
+      "vram": 8,
+      "tgp": null,
+      "gpuTier": 3,
+      "os": "Windows 11 Home",
+      "ram": "16GB",
+      "ramGB": 16,
+      "ramType": "DDR5",
+      "ramSoldered": false,
+      "ssd": "1TB PCIe SSD",
+      "storageSlots": null,
+      "ssdUpgradeable": true,
+      "dispSize": 16,
+      "res": "1920 × 1200",
+      "refreshHz": 165,
+      "panelType": "IPS",
+      "oled": false,
+      "touch": null,
+      "twoInOne": null,
+      "brightness": null,
+      "colorCoverage": null,
+      "batteryWh": null,
+      "weight": 2.5,
+      "ports": null,
+      "wifi": null,
+      "webcam": null,
+      "warranty": null,
+      "strengths": [
+        "16-inch 165Hz IPS display.",
+        "Memory expansion up to 32GB and SSD expansion up to 2TB are listed."
+      ],
+      "downsides": [
+        "GPU power and measured battery life were not confirmed."
+      ],
+      "categoryTags": [
+        "Gaming"
+      ],
+      "exact": true,
+      "generationStatus": null,
+      "catalogueStatus": "SOURCED",
+      "recordStatus": "PRODUCT_PAGE_CHECKED",
+      "specSource": "https://store.acer.com/en-in/acer-nitro-5-gaming-laptop-intel-core-i5-14450hx-nvidia-geforce-rtx-5050-8-gb-gddr7-16-gb-ram-windows-11-home-ms-office-1tb-ssd-fhd-16-40-64-cm-165hz-dark-gray-2-5kg-an516-74g1-rgb-keyboard",
+      "specCheckedAt": "2026-10-24",
+      "specSourceNote": "Exact India store product page read 24 October 2026. Unknown fields remain unknown; no independent performance or battery-life test was checked.",
+      "evidenceConfidence": "Exact model number and listed configuration observed on the linked first-party store page.",
+      "scores": {},
+      "rankingStatus": "NOT_BENCHMARKED"
+    },
+    "priceRecord": {
+      "verifiedAt": "2026-10-24",
+      "offers": [
+        {
+          "retailer": "Acer India Store",
+          "sku": "UN.U7PSI.007",
+          "price": 154990,
+          "inStock": true,
+          "stock": "IN_STOCK",
+          "checkedAt": "2026-10-24",
+          "sourceUrl": "https://store.acer.com/en-in/acer-nitro-5-gaming-laptop-intel-core-i5-14450hx-nvidia-geforce-rtx-5050-8-gb-gddr7-16-gb-ram-windows-11-home-ms-office-1tb-ssd-fhd-16-40-64-cm-165hz-dark-gray-2-5kg-an516-74g1-rgb-keyboard",
+          "canonicalUrl": "https://store.acer.com/en-in/acer-nitro-5-gaming-laptop-intel-core-i5-14450hx-nvidia-geforce-rtx-5050-8-gb-gddr7-16-gb-ram-windows-11-home-ms-office-1tb-ssd-fhd-16-40-64-cm-165hz-dark-gray-2-5kg-an516-74g1-rgb-keyboard",
+          "exactSkuMatch": true,
+          "configurationVerified": true,
+          "linkStatus": "VERIFIED",
+          "linkCheckedAt": "2026-10-24",
+          "httpStatus": 200,
+          "region": "India",
+          "offerType": "ONLINE",
+          "checkedFields": [
+            "sku",
+            "cpu",
+            "gpu",
+            "memory",
+            "storage",
+            "display",
+            "price",
+            "stock"
+          ],
+          "linkNote": "Displayed base selling price; excludes card discounts, coupons, delivery and checkout verification. Stock text observed on the product page."
+        }
+      ],
+      "history": [
+        {
+          "observedAt": "2026-10-24",
+          "retailer": "Acer India Store",
+          "sku": "UN.U7PSI.007",
+          "price": 154990,
+          "sourceUrl": "https://store.acer.com/en-in/acer-nitro-5-gaming-laptop-intel-core-i5-14450hx-nvidia-geforce-rtx-5050-8-gb-gddr7-16-gb-ram-windows-11-home-ms-office-1tb-ssd-fhd-16-40-64-cm-165hz-dark-gray-2-5kg-an516-74g1-rgb-keyboard",
+          "stock": "IN_STOCK"
+        }
+      ]
+    }
+  },
+  {
+    "laptop": {
+      "id": "lap_acer_un_37zsi_00b",
+      "brand": "Acer",
+      "family": "Aspire 14",
+      "modelName": "Aspire 14 AS14-39 — Ryzen 3 3200U / 8GB / 256GB",
+      "pn": "UN.37ZSI.00B",
+      "cpu": "AMD Ryzen 3 3200U",
+      "gpu": "AMD Radeon Vega Graphics",
+      "vram": null,
+      "tgp": null,
+      "gpuTier": 0,
+      "os": "Windows 11 Home",
+      "ram": "8GB",
+      "ramGB": 8,
+      "ramType": "DDR4",
+      "ramSoldered": false,
+      "ssd": "256GB PCIe NVMe SSD",
+      "storageSlots": null,
+      "ssdUpgradeable": true,
+      "dispSize": 14,
+      "res": "1920 × 1080",
+      "refreshHz": null,
+      "panelType": "IPS",
+      "oled": false,
+      "touch": null,
+      "twoInOne": null,
+      "brightness": null,
+      "colorCoverage": null,
+      "batteryWh": null,
+      "weight": 1.45,
+      "ports": null,
+      "wifi": null,
+      "webcam": null,
+      "warranty": null,
+      "strengths": [
+        "Full HD IPS display is listed for this exact SKU.",
+        "Memory expansion up to 32GB and storage expansion up to 1TB are stated."
+      ],
+      "downsides": [
+        "Older processor platform with 8GB RAM and 256GB storage; compare newer alternatives before purchase."
+      ],
+      "categoryTags": [
+        "Students",
+        "Office"
+      ],
+      "exact": true,
+      "generationStatus": "LEGACY",
+      "catalogueStatus": "SOURCED",
+      "recordStatus": "PRODUCT_PAGE_CHECKED",
+      "specSource": "https://store.acer.com/en-in/acer-aspire-14-amd-ryzen-3-3200u-processor-windows-11-home-8-gb-ram-256-gb-ssd-14-35-56-cm-display-dark-blue-as14-39-1-45-kg-thin-and-light-laptop",
+      "specCheckedAt": "2026-10-24",
+      "specSourceNote": "Exact India store product page read 24 October 2026. Unknown fields remain unknown; no independent performance or battery-life test was checked.",
+      "evidenceConfidence": "Exact model number and listed configuration observed on the linked first-party store page.",
+      "scores": {},
+      "rankingStatus": "NOT_BENCHMARKED"
+    },
+    "priceRecord": {
+      "verifiedAt": "2026-10-24",
+      "offers": [
+        {
+          "retailer": "Acer India Store",
+          "sku": "UN.37ZSI.00B",
+          "price": 32999,
+          "inStock": true,
+          "stock": "IN_STOCK",
+          "checkedAt": "2026-10-24",
+          "sourceUrl": "https://store.acer.com/en-in/acer-aspire-14-amd-ryzen-3-3200u-processor-windows-11-home-8-gb-ram-256-gb-ssd-14-35-56-cm-display-dark-blue-as14-39-1-45-kg-thin-and-light-laptop",
+          "canonicalUrl": "https://store.acer.com/en-in/acer-aspire-14-amd-ryzen-3-3200u-processor-windows-11-home-8-gb-ram-256-gb-ssd-14-35-56-cm-display-dark-blue-as14-39-1-45-kg-thin-and-light-laptop",
+          "exactSkuMatch": true,
+          "configurationVerified": true,
+          "linkStatus": "VERIFIED",
+          "linkCheckedAt": "2026-10-24",
+          "httpStatus": 200,
+          "region": "India",
+          "offerType": "ONLINE",
+          "checkedFields": [
+            "sku",
+            "cpu",
+            "gpu",
+            "memory",
+            "storage",
+            "display",
+            "price",
+            "stock"
+          ],
+          "linkNote": "Displayed base selling price; excludes card discounts, coupons, delivery and checkout verification. Stock text observed on the product page."
+        }
+      ],
+      "history": [
+        {
+          "observedAt": "2026-10-24",
+          "retailer": "Acer India Store",
+          "sku": "UN.37ZSI.00B",
+          "price": 32999,
+          "sourceUrl": "https://store.acer.com/en-in/acer-aspire-14-amd-ryzen-3-3200u-processor-windows-11-home-8-gb-ram-256-gb-ssd-14-35-56-cm-display-dark-blue-as14-39-1-45-kg-thin-and-light-laptop",
+          "stock": "IN_STOCK"
+        }
+      ]
+    }
+  },
+  {
+    "laptop": {
+      "id": "lap_acer_un_382si_00b",
+      "brand": "Acer",
+      "family": "Aspire 3",
+      "modelName": "Aspire 3 A325-39 — Ryzen 5 3500U / 8GB / 256GB",
+      "pn": "UN.382SI.00B",
+      "cpu": "AMD Ryzen 5 3500U",
+      "gpu": "AMD Radeon Vega Graphics",
+      "vram": null,
+      "tgp": null,
+      "gpuTier": 0,
+      "os": "Windows 11 Home",
+      "ram": "8GB",
+      "ramGB": 8,
+      "ramType": "DDR4",
+      "ramSoldered": false,
+      "ssd": "256GB PCIe NVMe SSD",
+      "storageSlots": null,
+      "ssdUpgradeable": true,
+      "dispSize": 15.6,
+      "res": "1920 × 1080",
+      "refreshHz": null,
+      "panelType": "IPS",
+      "oled": false,
+      "touch": null,
+      "twoInOne": null,
+      "brightness": null,
+      "colorCoverage": null,
+      "batteryWh": null,
+      "weight": 1.7,
+      "ports": null,
+      "wifi": null,
+      "webcam": null,
+      "warranty": null,
+      "strengths": [
+        "Full HD IPS display is listed for this exact SKU.",
+        "Memory expansion up to 32GB and storage expansion up to 1TB are stated."
+      ],
+      "downsides": [
+        "Older processor platform with 8GB RAM and 256GB storage; compare newer alternatives before purchase."
+      ],
+      "categoryTags": [
+        "Students",
+        "Office"
+      ],
+      "exact": true,
+      "generationStatus": "LEGACY",
+      "catalogueStatus": "SOURCED",
+      "recordStatus": "PRODUCT_PAGE_CHECKED",
+      "specSource": "https://store.acer.com/en-in/acer-aspire-3-amd-ryzen-5-3500u-processor-windows-11-home-8-gb-ram-256-gb-ssd-15-6-39-62-cm-display-light-silver-a325-39-1-7-kg-thin-and-light-laptop",
+      "specCheckedAt": "2026-10-24",
+      "specSourceNote": "Exact India store product page read 24 October 2026. Unknown fields remain unknown; no independent performance or battery-life test was checked.",
+      "evidenceConfidence": "Exact model number and listed configuration observed on the linked first-party store page.",
+      "scores": {},
+      "rankingStatus": "NOT_BENCHMARKED"
+    },
+    "priceRecord": {
+      "verifiedAt": "2026-10-24",
+      "offers": [
+        {
+          "retailer": "Acer India Store",
+          "sku": "UN.382SI.00B",
+          "price": 43999,
+          "inStock": true,
+          "stock": "IN_STOCK",
+          "checkedAt": "2026-10-24",
+          "sourceUrl": "https://store.acer.com/en-in/acer-aspire-3-amd-ryzen-5-3500u-processor-windows-11-home-8-gb-ram-256-gb-ssd-15-6-39-62-cm-display-light-silver-a325-39-1-7-kg-thin-and-light-laptop",
+          "canonicalUrl": "https://store.acer.com/en-in/acer-aspire-3-amd-ryzen-5-3500u-processor-windows-11-home-8-gb-ram-256-gb-ssd-15-6-39-62-cm-display-light-silver-a325-39-1-7-kg-thin-and-light-laptop",
+          "exactSkuMatch": true,
+          "configurationVerified": true,
+          "linkStatus": "VERIFIED",
+          "linkCheckedAt": "2026-10-24",
+          "httpStatus": 200,
+          "region": "India",
+          "offerType": "ONLINE",
+          "checkedFields": [
+            "sku",
+            "cpu",
+            "gpu",
+            "memory",
+            "storage",
+            "display",
+            "price",
+            "stock"
+          ],
+          "linkNote": "Displayed base selling price; excludes card discounts, coupons, delivery and checkout verification. Stock text observed on the product page."
+        }
+      ],
+      "history": [
+        {
+          "observedAt": "2026-10-24",
+          "retailer": "Acer India Store",
+          "sku": "UN.382SI.00B",
+          "price": 43999,
+          "sourceUrl": "https://store.acer.com/en-in/acer-aspire-3-amd-ryzen-5-3500u-processor-windows-11-home-8-gb-ram-256-gb-ssd-15-6-39-62-cm-display-light-silver-a325-39-1-7-kg-thin-and-light-laptop",
+          "stock": "IN_STOCK"
+        }
+      ]
+    }
+  },
+  {
+    "laptop": {
+      "id": "lap_hp_dq1j2pa_acj",
+      "brand": "HP",
+      "family": "HyperX OMEN",
+      "modelName": "HyperX OMEN 16-ap1096AX — Ryzen 9 9955HX / RTX 5060 / 16GB / 1TB",
+      "pn": "DQ1J2PA#ACJ",
+      "cpu": "AMD Ryzen 9 9955HX",
+      "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "vram": 8,
+      "tgp": null,
+      "gpuTier": 3,
+      "os": "Windows 11 Home Single Language",
+      "ram": "16GB",
+      "ramGB": 16,
+      "ramType": "DDR5-5600",
+      "ramSoldered": null,
+      "ssd": "1TB SSD",
+      "storageSlots": null,
+      "ssdUpgradeable": null,
+      "dispSize": 16,
+      "res": "1920 × 1200",
+      "refreshHz": 165,
+      "panelType": null,
+      "oled": null,
+      "touch": null,
+      "twoInOne": null,
+      "brightness": null,
+      "colorCoverage": null,
+      "batteryWh": 83,
+      "weight": 2.47,
+      "ports": null,
+      "wifi": null,
+      "webcam": null,
+      "warranty": null,
+      "strengths": [
+        "165Hz display is specified for the exact model.",
+        "83Wh battery capacity is listed; runtime was not independently tested."
+      ],
+      "downsides": [
+        "GPU power (TGP) was not confirmed; do not infer performance from the GPU name alone."
+      ],
+      "categoryTags": [
+        "Gaming"
+      ],
+      "exact": true,
+      "generationStatus": null,
+      "catalogueStatus": "SOURCED",
+      "recordStatus": "PRODUCT_PAGE_CHECKED",
+      "specSource": "https://www.hp.com/in-en/shop/products/laptops/hyperx-omen-16-inch-gaming-laptop-pc-16-ap1096ax-dq1j2pa-acj",
+      "specCheckedAt": "2026-10-24",
+      "specSourceNote": "Exact India store product page read 24 October 2026. Unknown fields remain unknown; no independent performance or battery-life test was checked.",
+      "evidenceConfidence": "Exact model number and listed configuration observed on the linked first-party store page.",
+      "scores": {},
+      "rankingStatus": "NOT_BENCHMARKED"
+    },
+    "priceRecord": {
+      "verifiedAt": "2026-10-24",
+      "offers": [
+        {
+          "retailer": "HP India Store",
+          "sku": "DQ1J2PA#ACJ",
+          "price": 218999,
+          "inStock": true,
+          "stock": "IN_STOCK",
+          "checkedAt": "2026-10-24",
+          "sourceUrl": "https://www.hp.com/in-en/shop/products/laptops/hyperx-omen-16-inch-gaming-laptop-pc-16-ap1096ax-dq1j2pa-acj",
+          "canonicalUrl": "https://www.hp.com/in-en/shop/products/laptops/hyperx-omen-16-inch-gaming-laptop-pc-16-ap1096ax-dq1j2pa-acj",
+          "exactSkuMatch": true,
+          "configurationVerified": true,
+          "linkStatus": "VERIFIED",
+          "linkCheckedAt": "2026-10-24",
+          "httpStatus": 200,
+          "region": "India",
+          "offerType": "ONLINE",
+          "checkedFields": [
+            "sku",
+            "cpu",
+            "gpu",
+            "memory",
+            "storage",
+            "display",
+            "price",
+            "stock"
+          ],
+          "linkNote": "Displayed base selling price; excludes card discounts, coupons, delivery and checkout verification. Stock text observed on the product page."
+        }
+      ],
+      "history": [
+        {
+          "observedAt": "2026-10-24",
+          "retailer": "HP India Store",
+          "sku": "DQ1J2PA#ACJ",
+          "price": 218999,
+          "sourceUrl": "https://www.hp.com/in-en/shop/products/laptops/hyperx-omen-16-inch-gaming-laptop-pc-16-ap1096ax-dq1j2pa-acj",
+          "stock": "IN_STOCK"
+        }
+      ]
+    }
+  },
+  {
+    "laptop": {
+      "id": "lap_hp_dq1h7pa_acj",
+      "brand": "HP",
+      "family": "Victus",
+      "modelName": "Victus 15-fb3096AX — Ryzen 7 260 / RTX 5050 / 16GB / 512GB",
+      "pn": "DQ1H7PA#ACJ",
+      "cpu": "AMD Ryzen 7 260",
+      "gpu": "NVIDIA GeForce RTX 5050 Laptop GPU",
+      "vram": 8,
+      "tgp": null,
+      "gpuTier": 3,
+      "os": "Windows 11 Home Single Language",
+      "ram": "16GB",
+      "ramGB": 16,
+      "ramType": "DDR5-5600",
+      "ramSoldered": null,
+      "ssd": "512GB SSD",
+      "storageSlots": null,
+      "ssdUpgradeable": null,
+      "dispSize": 15.6,
+      "res": "1920 × 1080",
+      "refreshHz": 144,
+      "panelType": null,
+      "oled": null,
+      "touch": null,
+      "twoInOne": null,
+      "brightness": null,
+      "colorCoverage": null,
+      "batteryWh": 70,
+      "weight": 2.29,
+      "ports": null,
+      "wifi": null,
+      "webcam": null,
+      "warranty": null,
+      "strengths": [
+        "144Hz display is specified for the exact model.",
+        "70Wh battery capacity is listed; runtime was not independently tested."
+      ],
+      "downsides": [
+        "GPU power (TGP) was not confirmed; do not infer performance from the GPU name alone."
+      ],
+      "categoryTags": [
+        "Gaming"
+      ],
+      "exact": true,
+      "generationStatus": null,
+      "catalogueStatus": "SOURCED",
+      "recordStatus": "PRODUCT_PAGE_CHECKED",
+      "specSource": "https://www.hp.com/in-en/shop/products/laptops/victus-gaming-laptop-15-fb3096ax-dq1h7pa-acj",
+      "specCheckedAt": "2026-10-24",
+      "specSourceNote": "Exact India store product page read 24 October 2026. Unknown fields remain unknown; no independent performance or battery-life test was checked.",
+      "evidenceConfidence": "Exact model number and listed configuration observed on the linked first-party store page.",
+      "scores": {},
+      "rankingStatus": "NOT_BENCHMARKED"
+    },
+    "priceRecord": {
+      "verifiedAt": "2026-10-24",
+      "offers": [
+        {
+          "retailer": "HP India Store",
+          "sku": "DQ1H7PA#ACJ",
+          "price": 150000,
+          "inStock": true,
+          "stock": "IN_STOCK",
+          "checkedAt": "2026-10-24",
+          "sourceUrl": "https://www.hp.com/in-en/shop/products/laptops/victus-gaming-laptop-15-fb3096ax-dq1h7pa-acj",
+          "canonicalUrl": "https://www.hp.com/in-en/shop/products/laptops/victus-gaming-laptop-15-fb3096ax-dq1h7pa-acj",
+          "exactSkuMatch": true,
+          "configurationVerified": true,
+          "linkStatus": "VERIFIED",
+          "linkCheckedAt": "2026-10-24",
+          "httpStatus": 200,
+          "region": "India",
+          "offerType": "ONLINE",
+          "checkedFields": [
+            "sku",
+            "cpu",
+            "gpu",
+            "memory",
+            "storage",
+            "display",
+            "price",
+            "stock"
+          ],
+          "linkNote": "Displayed base selling price; excludes card discounts, coupons, delivery and checkout verification. Stock text observed on the product page."
+        }
+      ],
+      "history": [
+        {
+          "observedAt": "2026-10-24",
+          "retailer": "HP India Store",
+          "sku": "DQ1H7PA#ACJ",
+          "price": 150000,
+          "sourceUrl": "https://www.hp.com/in-en/shop/products/laptops/victus-gaming-laptop-15-fb3096ax-dq1h7pa-acj",
+          "stock": "IN_STOCK"
+        }
+      ]
+    }
+  },
+  {
+    "laptop": {
+      "id": "lap_hp_dq1h5pa_acj",
+      "brand": "HP",
+      "family": "Victus",
+      "modelName": "Victus 15-fa2688TX — i5-14500HX / RTX 3050 / 16GB / 1TB",
+      "pn": "DQ1H5PA#ACJ",
+      "cpu": "Intel Core i5-14500HX",
+      "gpu": "NVIDIA GeForce RTX 3050 Laptop GPU",
+      "vram": 6,
+      "tgp": null,
+      "gpuTier": 1,
+      "os": "Windows 11 Home Single Language",
+      "ram": "16GB",
+      "ramGB": 16,
+      "ramType": "DDR5-5600",
+      "ramSoldered": false,
+      "ssd": "1TB SSD",
+      "storageSlots": null,
+      "ssdUpgradeable": null,
+      "dispSize": 15.6,
+      "res": "1920 × 1080",
+      "refreshHz": 144,
+      "panelType": null,
+      "oled": null,
+      "touch": null,
+      "twoInOne": null,
+      "brightness": null,
+      "colorCoverage": null,
+      "batteryWh": 70,
+      "weight": 2.29,
+      "ports": null,
+      "wifi": null,
+      "webcam": null,
+      "warranty": null,
+      "strengths": [
+        "144Hz display is specified for the exact model.",
+        "70Wh battery capacity is listed; runtime was not independently tested."
+      ],
+      "downsides": [
+        "GPU power (TGP) was not confirmed; do not infer performance from the GPU name alone."
+      ],
+      "categoryTags": [
+        "Gaming"
+      ],
+      "exact": true,
+      "generationStatus": null,
+      "catalogueStatus": "SOURCED",
+      "recordStatus": "PRODUCT_PAGE_CHECKED",
+      "specSource": "https://www.hp.com/in-en/shop/products/laptops/victus-gaming-laptop-15-fa2688tx-dq1h5pa-acj",
+      "specCheckedAt": "2026-10-24",
+      "specSourceNote": "Exact India store product page read 24 October 2026. Unknown fields remain unknown; no independent performance or battery-life test was checked.",
+      "evidenceConfidence": "Exact model number and listed configuration observed on the linked first-party store page.",
+      "scores": {},
+      "rankingStatus": "NOT_BENCHMARKED"
+    },
+    "priceRecord": {
+      "verifiedAt": "2026-10-24",
+      "offers": [
+        {
+          "retailer": "HP India Store",
+          "sku": "DQ1H5PA#ACJ",
+          "price": 119999,
+          "inStock": true,
+          "stock": "IN_STOCK",
+          "checkedAt": "2026-10-24",
+          "sourceUrl": "https://www.hp.com/in-en/shop/products/laptops/victus-gaming-laptop-15-fa2688tx-dq1h5pa-acj",
+          "canonicalUrl": "https://www.hp.com/in-en/shop/products/laptops/victus-gaming-laptop-15-fa2688tx-dq1h5pa-acj",
+          "exactSkuMatch": true,
+          "configurationVerified": true,
+          "linkStatus": "VERIFIED",
+          "linkCheckedAt": "2026-10-24",
+          "httpStatus": 200,
+          "region": "India",
+          "offerType": "ONLINE",
+          "checkedFields": [
+            "sku",
+            "cpu",
+            "gpu",
+            "memory",
+            "storage",
+            "display",
+            "price",
+            "stock"
+          ],
+          "linkNote": "Displayed base selling price; excludes card discounts, coupons, delivery and checkout verification. Stock text observed on the product page."
+        }
+      ],
+      "history": [
+        {
+          "observedAt": "2026-10-24",
+          "retailer": "HP India Store",
+          "sku": "DQ1H5PA#ACJ",
+          "price": 119999,
+          "sourceUrl": "https://www.hp.com/in-en/shop/products/laptops/victus-gaming-laptop-15-fa2688tx-dq1h5pa-acj",
+          "stock": "IN_STOCK"
+        }
+      ]
+    }
   }
 ]

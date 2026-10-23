@@ -1,5 +1,23 @@
 # BuildKit: candid product review
 
+## Follow-up: the landing page needed a stronger reason to exist
+
+The first redesign looked cleaner, but it still repeated the same navigation in several large boxes. It explained that BuildKit could build or find a computer without demonstrating the promised understanding. A prominent heading, more rounded cards and a bigger SKU count would not solve that problem.
+
+**Changed in the follow-up:** the promise is now **Buy the right computer. Understand every choice.** Three keyboard-accessible lessons explain graphics, memory and displays; each leads to the matching guide chapter. A compact desktop/laptop workspace replaces duplicated introductory cards. The laptop workspace includes sourced examples and their trade-offs, exact model numbers and source dates. Buying principles and four practical FAQs explain what the site can establish.
+
+Two functional issues also needed fixing. The laptop budget slider excluded everything below half its value despite being labelled a ceiling. It now includes all cheaper eligible models; explicit labelled ranges retain their lower limits. Comparisons also treated missing assessments as scores. An unassessed model now blocks automatic performance verdicts instead of becoming an assumed loser. Shortlist badges use recorded facts—lowest observed price or lowest recorded weight—rather than unsupported “best battery” or “best gaming” claims.
+
+Value alternatives now also require the same recorded OS and architecture family. A Windows-on-ARM model is not treated as a drop-in value replacement for an x86 Windows model. This still does not establish compatibility with a buyer's individual applications or peripherals.
+
+**Current evidence:** 628 catalogue records; 431 configurations with eligible observed-price offers, including 15 that pass the strict product-page trust gate. Twenty exact configurations were sourced during these two passes, with twelve added in the follow-up. The new entries include affordable Aspire models, three Nitro configurations, TUF variants with explicitly different 115W and 85W GPU limits, a Zephyrus G14, a ProArt P16, HP Victus and HyperX OMEN. ASUS stock was not unambiguously confirmed, so those entries remain reference-only. Coupon prices were not substituted for base selling prices.
+
+The follow-up identified **26 records requiring model-number or processor-description review**. Those records remain inspectable in all-specifications mode but cannot create purchase offers or establish budget fit. This is a basic quality gate; it does not establish that the remaining legacy records have been independently verified.
+
+**Further criticism:** factory specifications are not independent testing. Battery capacity does not establish runtime, a GPU name does not establish sustained performance, and a store's “in stock” text does not guarantee delivery. Acer's page for UN.U7CSI.007 even describes RTX 4050 memory as GDDR7; that contradiction is exposed instead of copied into a memory-type field. The site still needs a systematic legacy-SKU audit and a published, reproducible assessment method. Neither a larger catalogue nor the new design substitutes for that work.
+
+The following sections preserve the baseline assessment and findings from the first pass; their 608/616-record figures describe those earlier states.
+
 Reviewed 24 October 2026 against repository main `365c0f4` and the local revision in this branch.
 
 **Assessment:** BuildKit has a useful core, but the previous presentation promised more certainty than the evidence supported. A larger catalogue does not compensate for weak verification. Before marketing this as an authoritative buying service, improve the records and the evaluation method.

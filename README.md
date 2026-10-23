@@ -16,7 +16,7 @@ The check loads the actual inline application code, validates the sourced additi
 
 ## Maintain sourced laptop additions
 
-The 24 October 2026 additions are recorded in `data/laptop-additions-2026-10-24.json`. Each includes an exact SKU, a first-party India store URL, the observed date, and explicit unknown fields. Read the linked product page before changing a record. Do not copy specifications from a different SKU or manufacture a product URL.
+The 20 sourced configurations added on 24 October 2026 are recorded in `data/laptop-additions-2026-10-24.json`. They span Acer Aspire, Swift and Nitro, ASUS Vivobook, TUF, Zephyrus and ProArt, and HP Victus and HyperX OMEN. Each includes an exact SKU, a first-party India store URL, the observed date, and explicit unknown fields. Read the linked product page before changing a record. Do not copy specifications from a different SKU or manufacture a product URL.
 
 ```sh
 node scripts/update-catalogue.cjs
@@ -34,6 +34,14 @@ The update merges these records into `window.__BK_EMBEDDED__` in `index.html`, p
 An owner-entered number cannot create a purchase offer. An unconfirmed stock state cannot create a purchase offer. New observations have a per-record snapshot reference so adding a recently checked SKU does not make unrelated, older prices appear freshly checked.
 
 New laptops have no invented performance scores. They appear under **Recently checked**, are searchable and comparable by specifications, and carry **Performance ranking not assessed** until an editorial assessment is recorded.
+
+Obviously malformed model numbers and processor descriptions remain inspectable in all-specifications mode, but cannot create purchase offers or drive budget matching. This is a conservative record-quality gate, not a certification of the remaining legacy data.
+
+Dragging the laptop budget slider now means **all eligible prices up to that amount**. Explicit quick ranges retain their stated lower bound. Source dates, GPU power differences and unconfirmed stock remain per-SKU facts.
+
+## Landing page
+
+The landing page uses the promise **Buy the right computer. Understand every choice.** It includes keyboard-accessible hardware lessons, separate desktop/laptop workspace tabs, a small sourced laptop shelf, and buying FAQs. Shelf examples are not benchmark-tested recommendations; legacy-platform examples are kept in the finder rather than promoted on the landing page. Comparison does not name a performance winner when a selected model is unassessed.
 
 ## Scope and limitations
 

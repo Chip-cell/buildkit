@@ -8,20 +8,32 @@ let scripts=0;
 for(const m of html.matchAll(/<script\b[^>]*>([\s\S]*?)<\/script\s*>/gi)){vm.runInContext(m[1],context,{filename:'inline-'+(++scripts)});}
 vm.runInContext('CAT=window.__BK_EMBEDDED__.components;LAPTOPS=window.__BK_EMBEDDED__.laptops;PRICES=window.__BK_EMBEDDED__.prices;BENCHMARKS=window.__BK_EMBEDDED__.benchmarks;syncVerificationDates();validateBuildKitData(CAT,LAPTOPS,PRICES);hydratePrices();auditOfferQuality(CAT,LAPTOPS);registerLaptopUrls(LAPTOPS);derivePrices();',context);
 const additions=JSON.parse(fs.readFileSync(path.join(root,'data/laptop-additions-2026-10-24.json'),'utf8'));
-assert.equal(context.LAPTOPS.length,616);assert.equal(context.__BK_EMBEDDED__.laptopAudit.finalCount,616);
-assert.equal(new Set(context.LAPTOPS.map(x=>x.id)).size,616);
+const expected=608+additions.length;
+assert.equal(context.LAPTOPS.length,expected);assert.equal(context.__BK_EMBEDDED__.laptopAudit.finalCount,expected);
+assert.equal(new Set(context.LAPTOPS.map(x=>x.id)).size,expected);
+assert.equal(new Set(additions.map(x=>x.laptop.pn)).size,additions.length);
+assert(html.includes('Understand every choice.'));
 assert.equal((html.match(/id="catalogSearchInput"/g)||[]).length,1);
 assert(context.LAPTOP_SORTS.includes('recent'));
-for(const {laptop} of additions){
+for(const {laptop,priceRecord} of additions){
   const L=context.LAPTOPS.find(x=>x.id===laptop.id);assert(L);
   assert.equal(context.laptopValueWarning(L),'');assert.equal(context.laptopValueBadge(L),'');
   assert.equal(L.specCheckedAt,'2026-10-24');
-  if(L.brand==='Acer')assert(Number.isFinite(context.laptopBuyPrice(L)),L.pn+' must retain its observed offer');
+  if(priceRecord.offers.some(o=>o.inStock===true))assert(Number.isFinite(context.laptopBuyPrice(L)),L.pn+' must retain its observed offer');
   else {assert.equal(context.laptopBuyPrice(L),null,'Unknown stock must not be buyable');assert.equal(context.laptopPriceStatus(L).kind,'REFERENCE');assert(context.buyLinksFor(L)[0].flags.includes('STOCK_UNCONFIRMED'));}
 }
 const operator=context.LAPTOPS.find(L=>L.offers.some(o=>o.operatorSupplied));
 assert(operator);assert.equal(context.laptopBuyPrice(operator),null);
 assert.equal(context.laptopPriceStatus(operator).kind,'OPERATOR');
+assert(!context.sameLaptopSoftwarePlatform({os:'Windows 11',cpu:'Snapdragon X'},{os:'Windows 11',cpu:'Intel Core i5-14500HX'}));
+assert(context.sameLaptopSoftwarePlatform({os:'Windows 11 Pro',cpu:'AMD Ryzen 7 260'},{os:'Windows 11 Home',cpu:'Intel Core i5-14500HX'}));
+const ambiguous=context.LAPTOPS.find(L=>context.laptopRecordIssues(L).length&&L.offers.length);
+assert(ambiguous);assert.equal(context.laptopBuyPrice(ambiguous),null);
+assert(context.buyLinksFor(ambiguous).every(x=>!x.buyable));
+const gpu115=context.LAPTOPS.find(L=>L.pn==='FX608JMI-TU251WS');
+const gpu85=context.LAPTOPS.find(L=>L.pn==='FX610JM-TU105WS');
+assert.equal(gpu115.tgp,115);assert.equal(gpu85.tgp,85);
+assert.equal(context.laptopBuyPrice(gpu115),null,'ASUS stock must stay unknown despite a displayed price');
 const unknown={p:50000,inStock:true,operatorSupplied:true,sourceUrl:'https://www.flipkart.com/search?q=example'};
 assert.equal(context.validateLaptopOfferLink(unknown,{pn:'EXAMPLE'},[]).buyable,false);
 nodes.laptopEvidence=element('priced');nodes.fltBrand=element('any');
@@ -34,7 +46,12 @@ console.log("Evidence pools",verified.length,priced.length);assert(verified.leng
 assert(verified.every(L=>context.buyLinksFor(L).some(x=>x.buyable&&context.offerTrust(x.offer)==='TRUSTED')));
 nodes.laptopEvidence.value='catalogue';assert(getResults().some(L=>L.id==='lap_asus_x1607ca_mb350ws'));
 assert(getResults().some(L=>L.id===operator.id));
-context.lbudgetAll=false;assert(!getResults().some(L=>context.laptopBuyPrice(L)===null));context.lbudgetAll=true;
+assert(getResults().some(L=>L.id===ambiguous.id),'Ambiguous records remain inspectable in catalogue mode');
+context.lbudgetAll=false;assert(!getResults().some(L=>context.laptopBuyPrice(L)===null));
+assert(getResults().some(L=>L.pn==='UN.37ZSI.00B'),'A ceiling must include cheaper laptops, without an arbitrary lower bound');
+context.lbudgetRange={min:50000,max:100000,maxInclusive:true,label:'Explicit range'};
+assert(!getResults().some(L=>context.laptopBuyPrice(L)<50000),'An explicit labelled range retains its lower bound');
+context.lbudgetRange=null;context.lbudgetAll=true;
 context.searchQuery='swift neo 226v';assert(getResults().length>=2);assert(getResults().every(L=>/Swift Neo/.test(L.modelName)&&/226V/.test(L.cpu)));context.searchQuery='';
 nodes.laptopEvidence.value='priced';
 for(const uc of ['esports','aaa','creator'])for(const res of [1080,1440,2160]){
@@ -55,4 +72,18 @@ const optimize=context.optimizeDesktop;context.optimizeDesktop=()=>null;context.
 assert.equal(nodes.homeBudget.value,220000);assert.equal(nodes.homeBudgetOut.textContent,'₹2,20,000');
 assert(nodes.homeBuildPreview.innerHTML.includes('missing compatible part'));
 context.optimizeDesktop=optimize;
-console.log(`PASS: ${scripts} scripts; 616 unique records; 8 additions; price evidence, stock, search, pagination and 9 desktop profiles.`);
+const newModels=additions.map(x=>x.laptop.id);
+const comparison=context.buildCompareTable([newModels[0],newModels[1]],context.LAPTOPS,context.CAT,{},100000,1080,'aaa');
+assert(comparison.includes('Comparable performance evidence is incomplete'));
+assert(!comparison.includes('BEST GAMING'));assert(!comparison.includes('BEST FOR YOUR SELECTED USE'));
+nodes.homeLaptopShelf=element();context.renderHomeFeatured();
+assert.equal((nodes.homeLaptopShelf.innerHTML.match(/data-home-laptop=/g)||[]).length,3);
+assert(!nodes.homeLaptopShelf.innerHTML.includes('3200U'),'Legacy examples should not be promoted on the landing page');
+const controls=[0,1,2].map(index=>({attrs:{},handlers:{},dataset:{lesson:String(index)},setAttribute(k,v){this.attrs[k]=v;},addEventListener(k,fn){this.handlers[k]=fn;},focus(){this.focused=true;}}));
+const query=context.document.querySelectorAll;context.document.querySelectorAll=()=>controls;
+let selected;context.bindHomeTabs('test',button=>{selected=button;});
+controls[0].handlers.keydown({key:'End',preventDefault(){}});
+assert.equal(selected,controls[2]);assert.equal(controls[2].attrs['aria-selected'],'true');assert(controls[2].focused);
+context.document.querySelectorAll=query;
+console.log('Records requiring model/CPU review:',context.LAPTOPS.filter(L=>context.laptopRecordIssues(L).length).length);
+console.log(`PASS: ${scripts} scripts; ${expected} unique records; ${additions.length} sourced additions; evidence, stock, search, pagination, budget ceilings, comparison, landing tabs and 9 desktop profiles.`);
