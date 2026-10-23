@@ -56,5 +56,3 @@ assert.equal(nodes.homeBudget.value,220000);assert.equal(nodes.homeBudgetOut.tex
 assert(nodes.homeBuildPreview.innerHTML.includes('missing compatible part'));
 context.optimizeDesktop=optimize;
 console.log(`PASS: ${scripts} scripts; 616 unique records; 8 additions; price evidence, stock, search, pagination and 9 desktop profiles.`);
-
-
