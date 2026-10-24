@@ -16,7 +16,7 @@ The check loads the actual inline application code, validates the sourced additi
 
 ## Maintain sourced laptop additions
 
-The 20 sourced configurations added on 24 October 2026 are recorded in `data/laptop-additions-2026-10-24.json`. They span Acer Aspire, Swift and Nitro, ASUS Vivobook, TUF, Zephyrus and ProArt, and HP Victus and HyperX OMEN. Each includes an exact SKU, a first-party India store URL, the observed date, and explicit unknown fields. Read the linked product page before changing a record. Do not copy specifications from a different SKU or manufacture a product URL.
+The 29 sourced configurations recorded on 24 October 2026 are in `data/laptop-additions-2026-10-24.json`: 28 additions and one refreshed existing Nitro 5 Pro record. They span Acer Aspire, Swift, Nitro and Predator, ASUS Vivobook, TUF, ROG Strix, Zephyrus and ProArt, and HP Victus and HyperX OMEN. Each includes an exact SKU, a first-party India store URL, the observed date, and explicit unknown fields. Read the linked product page before changing a record. Do not copy specifications from a different SKU or manufacture a product URL.
 
 ```sh
 node scripts/update-catalogue.cjs

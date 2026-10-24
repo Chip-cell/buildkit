@@ -1,5 +1,11 @@
 # BuildKit: candid product review
 
+## Gaming release
+
+The publication pass adds eight further gaming SKUs and refreshes the existing Nitro 5 Pro UN.U7MSI.007 without duplicating it. The new configurations are ASUS FX608JHI-TU225WS, FA608PP-QT014WS, G614PR-RV032WS and V3607VJ-TK227WS; HP E20RNPA#ACJ and E26Q2PA#ACJ; and Acer UN.U4QSI.003 and UN.U46SI.004. The catalogue now holds 636 records, with 29 sourced configurations overall. Twenty pass the strict product-page price gate; 436 have eligible observed-price offers including retailer listings.
+
+Displayed stock for the new HP and Acer records was observed on their exact manufacturer-store pages. ASUS stock remains unconfirmed, so those models stay reference-only. The HP 15-fb3382AX store description calls its processor “Ryzen 7 7445H”; this is explicitly flagged for buyer confirmation. Source URLs, full configuration details and the base prices observed are retained in the JSON source records. No checkout or independent performance test is implied.
+
 ## Follow-up: the landing page needed a stronger reason to exist
 
 The first redesign looked cleaner, but it still repeated the same navigation in several large boxes. It explained that BuildKit could build or find a computer without demonstrating the promised understanding. A prominent heading, more rounded cards and a bigger SKU count would not solve that problem.

@@ -8,7 +8,7 @@ let scripts=0;
 for(const m of html.matchAll(/<script\b[^>]*>([\s\S]*?)<\/script\s*>/gi)){vm.runInContext(m[1],context,{filename:'inline-'+(++scripts)});}
 vm.runInContext('CAT=window.__BK_EMBEDDED__.components;LAPTOPS=window.__BK_EMBEDDED__.laptops;PRICES=window.__BK_EMBEDDED__.prices;BENCHMARKS=window.__BK_EMBEDDED__.benchmarks;syncVerificationDates();validateBuildKitData(CAT,LAPTOPS,PRICES);hydratePrices();auditOfferQuality(CAT,LAPTOPS);registerLaptopUrls(LAPTOPS);derivePrices();',context);
 const additions=JSON.parse(fs.readFileSync(path.join(root,'data/laptop-additions-2026-10-24.json'),'utf8'));
-const expected=608+additions.length;
+const expected=608+additions.filter(x=>!x.updatesExistingRecord).length;
 assert.equal(context.LAPTOPS.length,expected);assert.equal(context.__BK_EMBEDDED__.laptopAudit.finalCount,expected);
 assert.equal(new Set(context.LAPTOPS.map(x=>x.id)).size,expected);
 assert.equal(new Set(additions.map(x=>x.laptop.pn)).size,additions.length);
@@ -34,6 +34,8 @@ const gpu115=context.LAPTOPS.find(L=>L.pn==='FX608JMI-TU251WS');
 const gpu85=context.LAPTOPS.find(L=>L.pn==='FX610JM-TU105WS');
 assert.equal(gpu115.tgp,115);assert.equal(gpu85.tgp,85);
 assert.equal(context.laptopBuyPrice(gpu115),null,'ASUS stock must stay unknown despite a displayed price');
+const gamingRelease=['FX608JHI-TU225WS','FA608PP-QT014WS','G614PR-RV032WS','V3607VJ-TK227WS','E20RNPA#ACJ','E26Q2PA#ACJ','UN.U4QSI.003','UN.U46SI.004','UN.U7MSI.007'];
+for(const sku of gamingRelease){const L=context.LAPTOPS.find(x=>x.pn===sku);assert(L,sku);assert(context.laptopMatchesUse(L,'gaming'),sku+' should match Gaming');assert.equal(context.LAPTOPS.filter(x=>x.pn===sku).length,1,sku+' must not be duplicated');}
 const unknown={p:50000,inStock:true,operatorSupplied:true,sourceUrl:'https://www.flipkart.com/search?q=example'};
 assert.equal(context.validateLaptopOfferLink(unknown,{pn:'EXAMPLE'},[]).buyable,false);
 nodes.laptopEvidence=element('priced');nodes.fltBrand=element('any');

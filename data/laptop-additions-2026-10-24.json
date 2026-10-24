@@ -2001,5 +2001,903 @@
         }
       ]
     }
+  },
+  {
+    "laptop": {
+      "id": "lap_asus_fx608jhi_tu225ws",
+      "brand": "ASUS",
+      "family": "TUF Gaming F16",
+      "modelName": "TUF Gaming F16 FX608JHI-TU225WS — i7-14650HX / RTX 5050 / 16GB / 1TB",
+      "pn": "FX608JHI-TU225WS",
+      "cpu": "Intel Core i7-14650HX",
+      "gpu": "NVIDIA GeForce RTX 5050 Laptop GPU",
+      "vram": 8,
+      "tgp": 115,
+      "gpuTier": 3,
+      "os": "Windows 11 Home",
+      "ram": "16GB",
+      "ramGB": 16,
+      "ramType": "DDR5-5600",
+      "ramSoldered": false,
+      "ssd": "1TB PCIe 4.0 NVMe SSD",
+      "storageSlots": null,
+      "ssdUpgradeable": true,
+      "dispSize": 16,
+      "res": "1920 × 1200",
+      "refreshHz": 144,
+      "panelType": "IPS-level",
+      "oled": false,
+      "touch": null,
+      "twoInOne": null,
+      "brightness": 300,
+      "colorCoverage": null,
+      "batteryWh": 70,
+      "weight": 2.2,
+      "ports": null,
+      "wifi": null,
+      "webcam": null,
+      "warranty": null,
+      "strengths": [
+        "115W maximum GPU power is stated for this exact configuration.",
+        "Memory expansion up to 64GB is listed."
+      ],
+      "downsides": [
+        "2.2kg before the charger; measured runtime and cooling noise were not checked."
+      ],
+      "categoryTags": [
+        "Gaming"
+      ],
+      "exact": true,
+      "generationStatus": null,
+      "catalogueStatus": "SOURCED",
+      "recordStatus": "PRICE_NOT_VERIFIED",
+      "specSource": "https://in.store.asus.com/gaming-laptop-asus-tuf-gaming-f16-fx608.html",
+      "specCheckedAt": "2026-10-24",
+      "specSourceNote": "Exact India store page read 24 October 2026. Price excludes promotional coupon/card discounts; unknown details remain unknown. Checkout not attempted.",
+      "evidenceConfidence": "Exact displayed SKU, configuration and base price recorded from the linked manufacturer store.",
+      "scores": {},
+      "rankingStatus": "NOT_BENCHMARKED"
+    },
+    "priceRecord": {
+      "verifiedAt": "2026-10-24",
+      "offers": [
+        {
+          "retailer": "ASUS India Store",
+          "sku": "FX608JHI-TU225WS",
+          "price": 190990,
+          "inStock": null,
+          "stock": "NOT_CONFIRMED",
+          "checkedAt": "2026-10-24",
+          "sourceUrl": "https://in.store.asus.com/gaming-laptop-asus-tuf-gaming-f16-fx608.html",
+          "canonicalUrl": "https://in.store.asus.com/gaming-laptop-asus-tuf-gaming-f16-fx608.html",
+          "exactSkuMatch": true,
+          "configurationVerified": true,
+          "linkStatus": "VERIFIED",
+          "linkCheckedAt": "2026-10-24",
+          "httpStatus": 200,
+          "region": "India",
+          "offerType": "ONLINE",
+          "checkedFields": [
+            "sku",
+            "cpu",
+            "gpu",
+            "memory",
+            "storage",
+            "display",
+            "price"
+          ],
+          "linkNote": "Displayed price recorded; stock was not unambiguously confirmed. Reference-only offer."
+        }
+      ],
+      "history": [
+        {
+          "observedAt": "2026-10-24",
+          "retailer": "ASUS India Store",
+          "sku": "FX608JHI-TU225WS",
+          "price": 190990,
+          "sourceUrl": "https://in.store.asus.com/gaming-laptop-asus-tuf-gaming-f16-fx608.html",
+          "stock": "NOT_CONFIRMED"
+        }
+      ]
+    }
+  },
+  {
+    "laptop": {
+      "id": "lap_asus_fa608pp_qt014ws",
+      "brand": "ASUS",
+      "family": "TUF Gaming A16",
+      "modelName": "TUF Gaming A16 FA608PP-QT014WS — Ryzen 9 8940HX / RTX 5070 / 16GB / 1TB",
+      "pn": "FA608PP-QT014WS",
+      "cpu": "AMD Ryzen 9 8940HX",
+      "gpu": "NVIDIA GeForce RTX 5070 Laptop GPU",
+      "vram": 8,
+      "tgp": 115,
+      "gpuTier": 3,
+      "os": "Windows 11 Home",
+      "ram": "16GB",
+      "ramGB": 16,
+      "ramType": "DDR5-5200",
+      "ramSoldered": false,
+      "ssd": "1TB PCIe 4.0 NVMe SSD",
+      "storageSlots": null,
+      "ssdUpgradeable": null,
+      "dispSize": 16,
+      "res": "2560 × 1600",
+      "refreshHz": 165,
+      "panelType": null,
+      "oled": null,
+      "touch": null,
+      "twoInOne": null,
+      "brightness": 400,
+      "colorCoverage": null,
+      "batteryWh": 90,
+      "weight": 2.2,
+      "ports": null,
+      "wifi": null,
+      "webcam": null,
+      "warranty": null,
+      "strengths": [
+        "165Hz 2560 × 1600 display and 400-nit brightness are listed.",
+        "115W GPU power and memory expansion up to 64GB are stated."
+      ],
+      "downsides": [
+        "GPU power is configuration-specific; independent performance and battery tests were not checked."
+      ],
+      "categoryTags": [
+        "Gaming"
+      ],
+      "exact": true,
+      "generationStatus": null,
+      "catalogueStatus": "SOURCED",
+      "recordStatus": "PRICE_NOT_VERIFIED",
+      "specSource": "https://in.store.asus.com/gaming-laptop-asus-tuf-gaming-a16-fa608pp-qt014ws.html",
+      "specCheckedAt": "2026-10-24",
+      "specSourceNote": "Exact India store page read 24 October 2026. Price excludes promotional coupon/card discounts; unknown details remain unknown. Checkout not attempted.",
+      "evidenceConfidence": "Exact displayed SKU, configuration and base price recorded from the linked manufacturer store.",
+      "scores": {},
+      "rankingStatus": "NOT_BENCHMARKED"
+    },
+    "priceRecord": {
+      "verifiedAt": "2026-10-24",
+      "offers": [
+        {
+          "retailer": "ASUS India Store",
+          "sku": "FA608PP-QT014WS",
+          "price": 219990,
+          "inStock": null,
+          "stock": "NOT_CONFIRMED",
+          "checkedAt": "2026-10-24",
+          "sourceUrl": "https://in.store.asus.com/gaming-laptop-asus-tuf-gaming-a16-fa608pp-qt014ws.html",
+          "canonicalUrl": "https://in.store.asus.com/gaming-laptop-asus-tuf-gaming-a16-fa608pp-qt014ws.html",
+          "exactSkuMatch": true,
+          "configurationVerified": true,
+          "linkStatus": "VERIFIED",
+          "linkCheckedAt": "2026-10-24",
+          "httpStatus": 200,
+          "region": "India",
+          "offerType": "ONLINE",
+          "checkedFields": [
+            "sku",
+            "cpu",
+            "gpu",
+            "memory",
+            "storage",
+            "display",
+            "price"
+          ],
+          "linkNote": "Displayed price recorded; stock was not unambiguously confirmed. Reference-only offer."
+        }
+      ],
+      "history": [
+        {
+          "observedAt": "2026-10-24",
+          "retailer": "ASUS India Store",
+          "sku": "FA608PP-QT014WS",
+          "price": 219990,
+          "sourceUrl": "https://in.store.asus.com/gaming-laptop-asus-tuf-gaming-a16-fa608pp-qt014ws.html",
+          "stock": "NOT_CONFIRMED"
+        }
+      ]
+    }
+  },
+  {
+    "laptop": {
+      "id": "lap_asus_g614pr_rv032ws",
+      "brand": "ASUS",
+      "family": "ROG Strix G16",
+      "modelName": "ROG Strix G16 G614PR-RV032WS — Ryzen 9 8940HX / RTX 5070 Ti / 16GB / 1TB",
+      "pn": "G614PR-RV032WS",
+      "cpu": "AMD Ryzen 9 8940HX",
+      "gpu": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+      "vram": 12,
+      "tgp": 140,
+      "gpuTier": 4,
+      "os": "Windows 11 Home",
+      "ram": "16GB",
+      "ramGB": 16,
+      "ramType": "DDR5-5200",
+      "ramSoldered": false,
+      "ssd": "1TB PCIe 4.0 NVMe SSD",
+      "storageSlots": null,
+      "ssdUpgradeable": null,
+      "dispSize": 16,
+      "res": "1920 × 1200",
+      "refreshHz": 165,
+      "panelType": "IPS-level",
+      "oled": false,
+      "touch": null,
+      "twoInOne": null,
+      "brightness": 300,
+      "colorCoverage": null,
+      "batteryWh": 90,
+      "weight": 2.5,
+      "ports": null,
+      "wifi": null,
+      "webcam": null,
+      "warranty": null,
+      "strengths": [
+        "12GB GPU memory and 140W maximum GPU power are listed.",
+        "Memory expansion up to 64GB is stated."
+      ],
+      "downsides": [
+        "2.5kg before the charger; the listed panel is 1920 × 1200."
+      ],
+      "categoryTags": [
+        "Gaming"
+      ],
+      "exact": true,
+      "generationStatus": null,
+      "catalogueStatus": "SOURCED",
+      "recordStatus": "PRICE_NOT_VERIFIED",
+      "specSource": "https://in.store.asus.com/gaming-laptop-rog-strix-g16-g614pr-rv032ws.html",
+      "specCheckedAt": "2026-10-24",
+      "specSourceNote": "Exact India store page read 24 October 2026. Price excludes promotional coupon/card discounts; unknown details remain unknown. Checkout not attempted.",
+      "evidenceConfidence": "Exact displayed SKU, configuration and base price recorded from the linked manufacturer store.",
+      "scores": {},
+      "rankingStatus": "NOT_BENCHMARKED"
+    },
+    "priceRecord": {
+      "verifiedAt": "2026-10-24",
+      "offers": [
+        {
+          "retailer": "ASUS India Store",
+          "sku": "G614PR-RV032WS",
+          "price": 279990,
+          "inStock": null,
+          "stock": "NOT_CONFIRMED",
+          "checkedAt": "2026-10-24",
+          "sourceUrl": "https://in.store.asus.com/gaming-laptop-rog-strix-g16-g614pr-rv032ws.html",
+          "canonicalUrl": "https://in.store.asus.com/gaming-laptop-rog-strix-g16-g614pr-rv032ws.html",
+          "exactSkuMatch": true,
+          "configurationVerified": true,
+          "linkStatus": "VERIFIED",
+          "linkCheckedAt": "2026-10-24",
+          "httpStatus": 200,
+          "region": "India",
+          "offerType": "ONLINE",
+          "checkedFields": [
+            "sku",
+            "cpu",
+            "gpu",
+            "memory",
+            "storage",
+            "display",
+            "price"
+          ],
+          "linkNote": "Displayed price recorded; stock was not unambiguously confirmed. Reference-only offer."
+        }
+      ],
+      "history": [
+        {
+          "observedAt": "2026-10-24",
+          "retailer": "ASUS India Store",
+          "sku": "G614PR-RV032WS",
+          "price": 279990,
+          "sourceUrl": "https://in.store.asus.com/gaming-laptop-rog-strix-g16-g614pr-rv032ws.html",
+          "stock": "NOT_CONFIRMED"
+        }
+      ]
+    }
+  },
+  {
+    "laptop": {
+      "id": "lap_asus_v3607vj_tk227ws",
+      "brand": "ASUS",
+      "family": "Gaming V16",
+      "modelName": "Gaming V16 V3607VJ-TK227WS — Core 5 210H / RTX 3050 / 16GB / 512GB",
+      "pn": "V3607VJ-TK227WS",
+      "cpu": "Intel Core 5 210H",
+      "gpu": "NVIDIA GeForce RTX 3050 Laptop GPU",
+      "vram": 6,
+      "tgp": null,
+      "gpuTier": 1,
+      "os": "Windows 11 Home",
+      "ram": "16GB",
+      "ramGB": 16,
+      "ramType": "DDR5-5600",
+      "ramSoldered": false,
+      "ssd": "512GB PCIe 4.0 NVMe SSD",
+      "storageSlots": null,
+      "ssdUpgradeable": null,
+      "dispSize": 16,
+      "res": "1920 × 1200",
+      "refreshHz": 144,
+      "panelType": null,
+      "oled": null,
+      "touch": null,
+      "twoInOne": null,
+      "brightness": 300,
+      "colorCoverage": null,
+      "batteryWh": 63,
+      "weight": 1.95,
+      "ports": null,
+      "wifi": null,
+      "webcam": null,
+      "warranty": null,
+      "strengths": [
+        "16-inch 144Hz display is specified.",
+        "Memory expansion up to 32GB is listed."
+      ],
+      "downsides": [
+        "GPU power and independent sustained-performance tests were not confirmed."
+      ],
+      "categoryTags": [
+        "Gaming"
+      ],
+      "exact": true,
+      "generationStatus": null,
+      "catalogueStatus": "SOURCED",
+      "recordStatus": "PRICE_NOT_VERIFIED",
+      "specSource": "https://in.store.asus.com/gaming-laptop-asus-gaming-v16-v3607vu.html",
+      "specCheckedAt": "2026-10-24",
+      "specSourceNote": "Exact India store page read 24 October 2026. Price excludes promotional coupon/card discounts; unknown details remain unknown. Checkout not attempted.",
+      "evidenceConfidence": "Exact displayed SKU, configuration and base price recorded from the linked manufacturer store.",
+      "scores": {},
+      "rankingStatus": "NOT_BENCHMARKED"
+    },
+    "priceRecord": {
+      "verifiedAt": "2026-10-24",
+      "offers": [
+        {
+          "retailer": "ASUS India Store",
+          "sku": "V3607VJ-TK227WS",
+          "price": 125990,
+          "inStock": null,
+          "stock": "NOT_CONFIRMED",
+          "checkedAt": "2026-10-24",
+          "sourceUrl": "https://in.store.asus.com/gaming-laptop-asus-gaming-v16-v3607vu.html",
+          "canonicalUrl": "https://in.store.asus.com/gaming-laptop-asus-gaming-v16-v3607vu.html",
+          "exactSkuMatch": true,
+          "configurationVerified": true,
+          "linkStatus": "VERIFIED",
+          "linkCheckedAt": "2026-10-24",
+          "httpStatus": 200,
+          "region": "India",
+          "offerType": "ONLINE",
+          "checkedFields": [
+            "sku",
+            "cpu",
+            "gpu",
+            "memory",
+            "storage",
+            "display",
+            "price"
+          ],
+          "linkNote": "Displayed price recorded; stock was not unambiguously confirmed. Reference-only offer."
+        }
+      ],
+      "history": [
+        {
+          "observedAt": "2026-10-24",
+          "retailer": "ASUS India Store",
+          "sku": "V3607VJ-TK227WS",
+          "price": 125990,
+          "sourceUrl": "https://in.store.asus.com/gaming-laptop-asus-gaming-v16-v3607vu.html",
+          "stock": "NOT_CONFIRMED"
+        }
+      ]
+    }
+  },
+  {
+    "laptop": {
+      "id": "lap_hp_e20rnpa_acj",
+      "brand": "HP",
+      "family": "Victus",
+      "modelName": "Victus 15-fb3382AX — Ryzen 7 7445H / RTX 3050 / 12GB / 512GB",
+      "pn": "E20RNPA#ACJ",
+      "cpu": "AMD Ryzen 7 7445H (store description)",
+      "gpu": "NVIDIA GeForce RTX 3050 Laptop GPU",
+      "vram": 6,
+      "tgp": null,
+      "gpuTier": 1,
+      "os": "Windows 11 Home Single Language",
+      "ram": "12GB",
+      "ramGB": 12,
+      "ramType": null,
+      "ramSoldered": false,
+      "ssd": "512GB SSD",
+      "storageSlots": null,
+      "ssdUpgradeable": null,
+      "dispSize": 15.6,
+      "res": "1920 × 1080",
+      "refreshHz": 144,
+      "panelType": null,
+      "oled": null,
+      "touch": null,
+      "twoInOne": null,
+      "brightness": null,
+      "colorCoverage": null,
+      "batteryWh": null,
+      "weight": null,
+      "ports": null,
+      "wifi": null,
+      "webcam": null,
+      "warranty": null,
+      "strengths": [
+        "144Hz Full HD display is listed.",
+        "Upgradeable memory is stated for this exact configuration."
+      ],
+      "downsides": [
+        "The store calls the processor Ryzen 7 7445H; confirm the exact CPU designation before purchase.",
+        "GPU power and independently measured battery life were not confirmed."
+      ],
+      "categoryTags": [
+        "Gaming"
+      ],
+      "exact": true,
+      "generationStatus": null,
+      "catalogueStatus": "SOURCED",
+      "recordStatus": "PRODUCT_PAGE_CHECKED",
+      "specSource": "https://www.hp.com/in-en/shop/products/laptops/victus-gaming-laptop-15-fb3382ax-e20rnpa-acj",
+      "specCheckedAt": "2026-10-24",
+      "specSourceNote": "Exact India store page read 24 October 2026. Price excludes promotional coupon/card discounts; unknown details remain unknown. Checkout not attempted.",
+      "evidenceConfidence": "Exact displayed SKU, configuration and base price recorded from the linked manufacturer store.",
+      "scores": {},
+      "rankingStatus": "NOT_BENCHMARKED"
+    },
+    "priceRecord": {
+      "verifiedAt": "2026-10-24",
+      "offers": [
+        {
+          "retailer": "HP India Store",
+          "sku": "E20RNPA#ACJ",
+          "price": 109999,
+          "inStock": true,
+          "stock": "IN_STOCK",
+          "checkedAt": "2026-10-24",
+          "sourceUrl": "https://www.hp.com/in-en/shop/products/laptops/victus-gaming-laptop-15-fb3382ax-e20rnpa-acj",
+          "canonicalUrl": "https://www.hp.com/in-en/shop/products/laptops/victus-gaming-laptop-15-fb3382ax-e20rnpa-acj",
+          "exactSkuMatch": true,
+          "configurationVerified": true,
+          "linkStatus": "VERIFIED",
+          "linkCheckedAt": "2026-10-24",
+          "httpStatus": 200,
+          "region": "India",
+          "offerType": "ONLINE",
+          "checkedFields": [
+            "sku",
+            "cpu",
+            "gpu",
+            "memory",
+            "storage",
+            "display",
+            "price",
+            "stock"
+          ],
+          "linkNote": "In-stock text and base selling price observed on the exact product page. Checkout and delivery not verified."
+        }
+      ],
+      "history": [
+        {
+          "observedAt": "2026-10-24",
+          "retailer": "HP India Store",
+          "sku": "E20RNPA#ACJ",
+          "price": 109999,
+          "sourceUrl": "https://www.hp.com/in-en/shop/products/laptops/victus-gaming-laptop-15-fb3382ax-e20rnpa-acj",
+          "stock": "IN_STOCK"
+        }
+      ]
+    }
+  },
+  {
+    "laptop": {
+      "id": "lap_hp_e26q2pa_acj",
+      "brand": "HP",
+      "family": "Victus",
+      "modelName": "Victus 15-fa3006TX — Core 7 230H / RTX 3050 / 16GB / 512GB",
+      "pn": "E26Q2PA#ACJ",
+      "cpu": "Intel Core 7 230H",
+      "gpu": "NVIDIA GeForce RTX 3050 Laptop GPU",
+      "vram": 6,
+      "tgp": null,
+      "gpuTier": 1,
+      "os": "Windows 11 Home Single Language",
+      "ram": "16GB",
+      "ramGB": 16,
+      "ramType": null,
+      "ramSoldered": false,
+      "ssd": "512GB SSD",
+      "storageSlots": null,
+      "ssdUpgradeable": null,
+      "dispSize": 15.6,
+      "res": "1920 × 1080",
+      "refreshHz": 144,
+      "panelType": null,
+      "oled": null,
+      "touch": null,
+      "twoInOne": null,
+      "brightness": null,
+      "colorCoverage": null,
+      "batteryWh": null,
+      "weight": null,
+      "ports": null,
+      "wifi": null,
+      "webcam": null,
+      "warranty": null,
+      "strengths": [
+        "144Hz Full HD display is listed.",
+        "Upgradeable memory is stated for this exact configuration."
+      ],
+      "downsides": [
+        "GPU power and independently measured battery life were not confirmed."
+      ],
+      "categoryTags": [
+        "Gaming"
+      ],
+      "exact": true,
+      "generationStatus": null,
+      "catalogueStatus": "SOURCED",
+      "recordStatus": "PRODUCT_PAGE_CHECKED",
+      "specSource": "https://www.hp.com/in-en/shop/products/laptops/victus-gaming-laptop-15-fa3006tx-e26q2pa-acj",
+      "specCheckedAt": "2026-10-24",
+      "specSourceNote": "Exact India store page read 24 October 2026. Price excludes promotional coupon/card discounts; unknown details remain unknown. Checkout not attempted.",
+      "evidenceConfidence": "Exact displayed SKU, configuration and base price recorded from the linked manufacturer store.",
+      "scores": {},
+      "rankingStatus": "NOT_BENCHMARKED"
+    },
+    "priceRecord": {
+      "verifiedAt": "2026-10-24",
+      "offers": [
+        {
+          "retailer": "HP India Store",
+          "sku": "E26Q2PA#ACJ",
+          "price": 124999,
+          "inStock": true,
+          "stock": "IN_STOCK",
+          "checkedAt": "2026-10-24",
+          "sourceUrl": "https://www.hp.com/in-en/shop/products/laptops/victus-gaming-laptop-15-fa3006tx-e26q2pa-acj",
+          "canonicalUrl": "https://www.hp.com/in-en/shop/products/laptops/victus-gaming-laptop-15-fa3006tx-e26q2pa-acj",
+          "exactSkuMatch": true,
+          "configurationVerified": true,
+          "linkStatus": "VERIFIED",
+          "linkCheckedAt": "2026-10-24",
+          "httpStatus": 200,
+          "region": "India",
+          "offerType": "ONLINE",
+          "checkedFields": [
+            "sku",
+            "cpu",
+            "gpu",
+            "memory",
+            "storage",
+            "display",
+            "price",
+            "stock"
+          ],
+          "linkNote": "In-stock text and base selling price observed on the exact product page. Checkout and delivery not verified."
+        }
+      ],
+      "history": [
+        {
+          "observedAt": "2026-10-24",
+          "retailer": "HP India Store",
+          "sku": "E26Q2PA#ACJ",
+          "price": 124999,
+          "sourceUrl": "https://www.hp.com/in-en/shop/products/laptops/victus-gaming-laptop-15-fa3006tx-e26q2pa-acj",
+          "stock": "IN_STOCK"
+        }
+      ]
+    }
+  },
+  {
+    "laptop": {
+      "id": "lap_acer_un_u4qsi_003",
+      "brand": "Acer",
+      "family": "Predator Helios Neo 16",
+      "modelName": "Predator Helios Neo 16 PHN16-I31 — i7-14650HX / RTX 5070 / 16GB / 1TB",
+      "pn": "UN.U4QSI.003",
+      "cpu": "Intel Core i7-14650HX",
+      "gpu": "NVIDIA GeForce RTX 5070 Laptop GPU",
+      "vram": 8,
+      "tgp": null,
+      "gpuTier": 3,
+      "os": "Windows 11 Home",
+      "ram": "16GB",
+      "ramGB": 16,
+      "ramType": "DDR5",
+      "ramSoldered": false,
+      "ssd": "1TB PCIe NVMe SSD",
+      "storageSlots": null,
+      "ssdUpgradeable": true,
+      "dispSize": 16,
+      "res": "2560 × 1600",
+      "refreshHz": 180,
+      "panelType": "IPS",
+      "oled": false,
+      "touch": null,
+      "twoInOne": null,
+      "brightness": null,
+      "colorCoverage": "100% sRGB (store specification)",
+      "batteryWh": null,
+      "weight": 2.5,
+      "ports": null,
+      "wifi": null,
+      "webcam": null,
+      "warranty": null,
+      "strengths": [
+        "180Hz IPS display is specified for this exact SKU.",
+        "Memory expansion up to 32GB and storage expansion up to 2TB are listed."
+      ],
+      "downsides": [
+        "GPU power and independent sustained-performance tests were not confirmed."
+      ],
+      "categoryTags": [
+        "Gaming"
+      ],
+      "exact": true,
+      "generationStatus": null,
+      "catalogueStatus": "SOURCED",
+      "recordStatus": "PRODUCT_PAGE_CHECKED",
+      "specSource": "https://store.acer.com/en-in/acer-predator-helios-neo-16-gaming-laptop-windows-11-home-ms-office-nvidia-geforce-rtx-5070-laptop-gpu-with-8gb-gddr7-vram-16gb-ram-1tb-ssd-16-0-40-64-cm-display-abyss-black-phn16-i31-2-5-kg-rgb-backlight-keyboard",
+      "specCheckedAt": "2026-10-24",
+      "specSourceNote": "Exact India store page read 24 October 2026. Price excludes promotional coupon/card discounts; unknown details remain unknown. Checkout not attempted.",
+      "evidenceConfidence": "Exact displayed SKU, configuration and base price recorded from the linked manufacturer store.",
+      "scores": {},
+      "rankingStatus": "NOT_BENCHMARKED"
+    },
+    "priceRecord": {
+      "verifiedAt": "2026-10-24",
+      "offers": [
+        {
+          "retailer": "Acer India Store",
+          "sku": "UN.U4QSI.003",
+          "price": 272990,
+          "inStock": true,
+          "stock": "IN_STOCK",
+          "checkedAt": "2026-10-24",
+          "sourceUrl": "https://store.acer.com/en-in/acer-predator-helios-neo-16-gaming-laptop-windows-11-home-ms-office-nvidia-geforce-rtx-5070-laptop-gpu-with-8gb-gddr7-vram-16gb-ram-1tb-ssd-16-0-40-64-cm-display-abyss-black-phn16-i31-2-5-kg-rgb-backlight-keyboard",
+          "canonicalUrl": "https://store.acer.com/en-in/acer-predator-helios-neo-16-gaming-laptop-windows-11-home-ms-office-nvidia-geforce-rtx-5070-laptop-gpu-with-8gb-gddr7-vram-16gb-ram-1tb-ssd-16-0-40-64-cm-display-abyss-black-phn16-i31-2-5-kg-rgb-backlight-keyboard",
+          "exactSkuMatch": true,
+          "configurationVerified": true,
+          "linkStatus": "VERIFIED",
+          "linkCheckedAt": "2026-10-24",
+          "httpStatus": 200,
+          "region": "India",
+          "offerType": "ONLINE",
+          "checkedFields": [
+            "sku",
+            "cpu",
+            "gpu",
+            "memory",
+            "storage",
+            "display",
+            "price",
+            "stock"
+          ],
+          "linkNote": "In-stock text and base selling price observed on the exact product page. Checkout and delivery not verified."
+        }
+      ],
+      "history": [
+        {
+          "observedAt": "2026-10-24",
+          "retailer": "Acer India Store",
+          "sku": "UN.U4QSI.003",
+          "price": 272990,
+          "sourceUrl": "https://store.acer.com/en-in/acer-predator-helios-neo-16-gaming-laptop-windows-11-home-ms-office-nvidia-geforce-rtx-5070-laptop-gpu-with-8gb-gddr7-vram-16gb-ram-1tb-ssd-16-0-40-64-cm-display-abyss-black-phn16-i31-2-5-kg-rgb-backlight-keyboard",
+          "stock": "IN_STOCK"
+        }
+      ]
+    }
+  },
+  {
+    "laptop": {
+      "id": "lap_acer_un_u46si_004",
+      "brand": "Acer",
+      "family": "Predator Helios Neo 16 AI",
+      "modelName": "Predator Helios Neo 16 AI PHN16-I71 — Ultra 9 290HX Plus / RTX 5080 / 16GB / 1TB",
+      "pn": "UN.U46SI.004",
+      "cpu": "Intel Core Ultra 9 290HX Plus",
+      "gpu": "NVIDIA GeForce RTX 5080 Laptop GPU",
+      "vram": 16,
+      "tgp": null,
+      "gpuTier": 4,
+      "os": "Windows 11 Home",
+      "ram": "16GB",
+      "ramGB": 16,
+      "ramType": "DDR5",
+      "ramSoldered": false,
+      "ssd": "1TB PCIe NVMe SSD",
+      "storageSlots": null,
+      "ssdUpgradeable": true,
+      "dispSize": 16,
+      "res": "2560 × 1600",
+      "refreshHz": 240,
+      "panelType": "IPS",
+      "oled": false,
+      "touch": null,
+      "twoInOne": null,
+      "brightness": null,
+      "colorCoverage": null,
+      "batteryWh": null,
+      "weight": 2.7,
+      "ports": null,
+      "wifi": null,
+      "webcam": null,
+      "warranty": null,
+      "strengths": [
+        "240Hz IPS display is specified for this exact SKU.",
+        "Memory expansion up to 64GB and storage expansion up to 2TB are listed."
+      ],
+      "downsides": [
+        "GPU power and independent sustained-performance tests were not confirmed."
+      ],
+      "categoryTags": [
+        "Gaming"
+      ],
+      "exact": true,
+      "generationStatus": null,
+      "catalogueStatus": "SOURCED",
+      "recordStatus": "PRODUCT_PAGE_CHECKED",
+      "specSource": "https://store.acer.com/en-in/acer-predator-helios-neo-16-ai-gaming-laptop-windows-11-home-ms-office-intel-core-ultra-9-processor-290hx-plus-nvidia-geforce-rtx-5080-with-16-gb-gddr7-vram-16gb-ram-1tb-ssd-16-0-40-64-cm-display-240-hz-black-phn16-i71-2-7-kg",
+      "specCheckedAt": "2026-10-24",
+      "specSourceNote": "Exact India store page read 24 October 2026. Price excludes promotional coupon/card discounts; unknown details remain unknown. Checkout not attempted.",
+      "evidenceConfidence": "Exact displayed SKU, configuration and base price recorded from the linked manufacturer store.",
+      "scores": {},
+      "rankingStatus": "NOT_BENCHMARKED"
+    },
+    "priceRecord": {
+      "verifiedAt": "2026-10-24",
+      "offers": [
+        {
+          "retailer": "Acer India Store",
+          "sku": "UN.U46SI.004",
+          "price": 402999,
+          "inStock": true,
+          "stock": "IN_STOCK",
+          "checkedAt": "2026-10-24",
+          "sourceUrl": "https://store.acer.com/en-in/acer-predator-helios-neo-16-ai-gaming-laptop-windows-11-home-ms-office-intel-core-ultra-9-processor-290hx-plus-nvidia-geforce-rtx-5080-with-16-gb-gddr7-vram-16gb-ram-1tb-ssd-16-0-40-64-cm-display-240-hz-black-phn16-i71-2-7-kg",
+          "canonicalUrl": "https://store.acer.com/en-in/acer-predator-helios-neo-16-ai-gaming-laptop-windows-11-home-ms-office-intel-core-ultra-9-processor-290hx-plus-nvidia-geforce-rtx-5080-with-16-gb-gddr7-vram-16gb-ram-1tb-ssd-16-0-40-64-cm-display-240-hz-black-phn16-i71-2-7-kg",
+          "exactSkuMatch": true,
+          "configurationVerified": true,
+          "linkStatus": "VERIFIED",
+          "linkCheckedAt": "2026-10-24",
+          "httpStatus": 200,
+          "region": "India",
+          "offerType": "ONLINE",
+          "checkedFields": [
+            "sku",
+            "cpu",
+            "gpu",
+            "memory",
+            "storage",
+            "display",
+            "price",
+            "stock"
+          ],
+          "linkNote": "In-stock text and base selling price observed on the exact product page. Checkout and delivery not verified."
+        }
+      ],
+      "history": [
+        {
+          "observedAt": "2026-10-24",
+          "retailer": "Acer India Store",
+          "sku": "UN.U46SI.004",
+          "price": 402999,
+          "sourceUrl": "https://store.acer.com/en-in/acer-predator-helios-neo-16-ai-gaming-laptop-windows-11-home-ms-office-intel-core-ultra-9-processor-290hx-plus-nvidia-geforce-rtx-5080-with-16-gb-gddr7-vram-16gb-ram-1tb-ssd-16-0-40-64-cm-display-240-hz-black-phn16-i71-2-7-kg",
+          "stock": "IN_STOCK"
+        }
+      ]
+    }
+  },
+  {
+    "laptop": {
+      "id": "lap_acer_un_u7msi_007",
+      "brand": "Acer",
+      "family": "Nitro 5 Pro",
+      "modelName": "Nitro 5 Pro AN5P16-74G2 — i5-14450HX / RTX 5050 / 16GB / 1TB",
+      "pn": "UN.U7MSI.007",
+      "cpu": "Intel Core i5-14450HX",
+      "gpu": "NVIDIA GeForce RTX 5050 Laptop GPU",
+      "vram": 8,
+      "tgp": null,
+      "gpuTier": 3,
+      "os": "Windows 11 Home",
+      "ram": "16GB",
+      "ramGB": 16,
+      "ramType": "DDR5",
+      "ramSoldered": false,
+      "ssd": "1TB PCIe NVMe SSD",
+      "storageSlots": null,
+      "ssdUpgradeable": true,
+      "dispSize": 16,
+      "res": "1920 × 1200",
+      "refreshHz": 165,
+      "panelType": "IPS",
+      "oled": false,
+      "touch": null,
+      "twoInOne": null,
+      "brightness": null,
+      "colorCoverage": null,
+      "batteryWh": null,
+      "weight": 2.5,
+      "ports": null,
+      "wifi": null,
+      "webcam": null,
+      "warranty": null,
+      "strengths": [
+        "165Hz IPS display is specified for this exact SKU.",
+        "Memory expansion up to 32GB and storage expansion up to 2TB are listed."
+      ],
+      "downsides": [
+        "GPU power and independent sustained-performance tests were not confirmed."
+      ],
+      "categoryTags": [
+        "Gaming"
+      ],
+      "exact": true,
+      "generationStatus": null,
+      "catalogueStatus": "SOURCED",
+      "recordStatus": "PRODUCT_PAGE_CHECKED",
+      "specSource": "https://store.acer.com/en-in/acer-nitro-5-pro-gaming-laptop-intel-core-i5-14450hx-nvidia-geforce-rtx-5050-8-gb-gddr7-16-gb-ram-1tb-ssd-fhd-16-40-64-cm-165hz-windows-11-home-ms-office-dark-gray-2-5kg-an5p16-74g2-rgb-keyboard",
+      "specCheckedAt": "2026-10-24",
+      "specSourceNote": "Exact India store page read 24 October 2026. Price excludes promotional coupon/card discounts; unknown details remain unknown. Checkout not attempted.",
+      "evidenceConfidence": "Exact displayed SKU, configuration and base price recorded from the linked manufacturer store.",
+      "scores": {},
+      "rankingStatus": "NOT_BENCHMARKED"
+    },
+    "priceRecord": {
+      "verifiedAt": "2026-10-24",
+      "offers": [
+        {
+          "retailer": "Acer India Store",
+          "sku": "UN.U7MSI.007",
+          "price": 154990,
+          "inStock": true,
+          "stock": "IN_STOCK",
+          "checkedAt": "2026-10-24",
+          "sourceUrl": "https://store.acer.com/en-in/acer-nitro-5-pro-gaming-laptop-intel-core-i5-14450hx-nvidia-geforce-rtx-5050-8-gb-gddr7-16-gb-ram-1tb-ssd-fhd-16-40-64-cm-165hz-windows-11-home-ms-office-dark-gray-2-5kg-an5p16-74g2-rgb-keyboard",
+          "canonicalUrl": "https://store.acer.com/en-in/acer-nitro-5-pro-gaming-laptop-intel-core-i5-14450hx-nvidia-geforce-rtx-5050-8-gb-gddr7-16-gb-ram-1tb-ssd-fhd-16-40-64-cm-165hz-windows-11-home-ms-office-dark-gray-2-5kg-an5p16-74g2-rgb-keyboard",
+          "exactSkuMatch": true,
+          "configurationVerified": true,
+          "linkStatus": "VERIFIED",
+          "linkCheckedAt": "2026-10-24",
+          "httpStatus": 200,
+          "region": "India",
+          "offerType": "ONLINE",
+          "checkedFields": [
+            "sku",
+            "cpu",
+            "gpu",
+            "memory",
+            "storage",
+            "display",
+            "price",
+            "stock"
+          ],
+          "linkNote": "In-stock text and base selling price observed on the exact product page. Checkout and delivery not verified."
+        }
+      ],
+      "history": [
+        {
+          "observedAt": "2026-10-24",
+          "retailer": "Acer India Store",
+          "sku": "UN.U7MSI.007",
+          "price": 154990,
+          "sourceUrl": "https://store.acer.com/en-in/acer-nitro-5-pro-gaming-laptop-intel-core-i5-14450hx-nvidia-geforce-rtx-5050-8-gb-gddr7-16-gb-ram-1tb-ssd-fhd-16-40-64-cm-165hz-windows-11-home-ms-office-dark-gray-2-5kg-an5p16-74g2-rgb-keyboard",
+          "stock": "IN_STOCK"
+        }
+      ]
+    },
+    "updatesExistingRecord": true
   }
 ]
