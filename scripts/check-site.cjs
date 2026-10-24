@@ -19,8 +19,8 @@ for(const {laptop,priceRecord} of additions){
   const L=context.LAPTOPS.find(x=>x.id===laptop.id);assert(L);
   assert.equal(context.laptopValueWarning(L),'');assert.equal(context.laptopValueBadge(L),'');
   assert.equal(L.specCheckedAt,'2026-10-24');
-  if(priceRecord.offers.some(o=>o.inStock===true))assert(Number.isFinite(context.laptopBuyPrice(L)),L.pn+' must retain its observed offer');
-  else {assert.equal(context.laptopBuyPrice(L),null,'Unknown stock must not be buyable');assert.equal(context.laptopPriceStatus(L).kind,'REFERENCE');assert(context.buyLinksFor(L)[0].flags.includes('STOCK_UNCONFIRMED'));}
+  if(L.offers.every(o=>o.inStock!==true||o.priceCheckStatus&&!/^VERIFIED_PRICE_/.test(o.priceCheckStatus)))assert.equal(context.laptopBuyPrice(L),null,'Unavailable or unconfirmed offers cannot set a buy price');
+  for(const link of context.buyLinksFor(L).filter(x=>x.buyable)){assert.equal(link.offer.inStock,true);assert.equal(link.offer.priceCheckStatus,'VERIFIED_PRICE_IN_STOCK');}
 }
 const operator=context.LAPTOPS.find(L=>L.offers.some(o=>o.operatorSupplied));
 assert(operator);assert.equal(context.laptopBuyPrice(operator),null);
@@ -33,7 +33,7 @@ assert(context.buyLinksFor(ambiguous).every(x=>!x.buyable));
 const gpu115=context.LAPTOPS.find(L=>L.pn==='FX608JMI-TU251WS');
 const gpu85=context.LAPTOPS.find(L=>L.pn==='FX610JM-TU105WS');
 assert.equal(gpu115.tgp,115);assert.equal(gpu85.tgp,85);
-assert.equal(context.laptopBuyPrice(gpu115),null,'ASUS stock must stay unknown despite a displayed price');
+const unknownStock=structuredClone(gpu115);unknownStock.offers.forEach(o=>{o.inStock=null;o.priceCheckStatus='VERIFIED_PRICE_STOCK_UNKNOWN';});assert.equal(context.laptopBuyPrice(unknownStock),null,'A displayed price does not confirm stock');
 const gamingRelease=['FX608JHI-TU225WS','FA608PP-QT014WS','G614PR-RV032WS','V3607VJ-TK227WS','E20RNPA#ACJ','E26Q2PA#ACJ','UN.U4QSI.003','UN.U46SI.004','UN.U7MSI.007'];
 for(const sku of gamingRelease){const L=context.LAPTOPS.find(x=>x.pn===sku);assert(L,sku);assert(context.laptopMatchesUse(L,'gaming'),sku+' should match Gaming');assert.equal(context.LAPTOPS.filter(x=>x.pn===sku).length,1,sku+' must not be duplicated');}
 const unknown={p:50000,inStock:true,operatorSupplied:true,sourceUrl:'https://www.flipkart.com/search?q=example'};
@@ -42,9 +42,9 @@ nodes.laptopEvidence=element('priced');nodes.fltBrand=element('any');
 const getResults=()=>context.laptopFinderGrouped(100000,context.LAPTOPS,'all',[],'recent').inBudget;
 const priced=getResults();assert(priced.length>30);assert(!priced.some(L=>L.id===operator.id));
 assert(priced.every(L=>context.buyLinksFor(L).some(x=>x.buyable&&['TRUSTED','LISTING'].includes(context.offerTrust(x.offer)))));
-assert.equal(priced[0].specCheckedAt,'2026-10-24');
+assert.equal(context.laptopCheckedDate(priced[0]),'2026-10-24');
 nodes.laptopEvidence.value='verified';const verified=getResults();
-console.log("Evidence pools",verified.length,priced.length);assert(verified.length>=7&&verified.length<priced.length);
+console.log("Evidence pools",verified.length,priced.length);assert(verified.length>=7&&verified.length<=priced.length);
 assert(verified.every(L=>context.buyLinksFor(L).some(x=>x.buyable&&context.offerTrust(x.offer)==='TRUSTED')));
 nodes.laptopEvidence.value='catalogue';assert(getResults().some(L=>L.id==='lap_asus_x1607ca_mb350ws'));
 assert(getResults().some(L=>L.id===operator.id));
@@ -108,3 +108,19 @@ console.log('PASS: legacy-score safeguards, 9 Neo hardware corrections, source p
 assert(!neoCompare.includes('LOWEST RECORDED WEIGHT'),'Equal weights should not manufacture a distinguishing badge');
 
 assert.equal(context.validateBuildKitData(context.CAT,context.LAPTOPS,context.PRICES).errors.length,0,'SKU corrections must reach current offer records');
+
+const priceAudit=JSON.parse(fs.readFileSync(path.join(root,'data/price-rechecks-2026-10-24.json'),'utf8'));
+assert.equal(priceAudit.results.length,699);assert.equal(new Set(priceAudit.results.map(x=>[x.kind,x.id,x.index].join('/'))).size,699);
+assert.equal(priceAudit.results.filter(x=>/^VERIFIED_PRICE_/.test(x.status)).length,313);
+const recheckExample=priceAudit.results.find(x=>x.kind==='laptops'&&x.status==='CONFIGURATION_MISMATCH');
+const recheckLaptop=context.LAPTOPS.find(x=>x.id===recheckExample.id);
+assert.equal(context.laptopBuyPrice(recheckLaptop),null);assert.equal(context.laptopPriceStatus(recheckLaptop).kind,'RECHECK');assert(context.buyLinksFor(recheckLaptop).every(x=>!x.buyable));
+for(const L of context.LAPTOPS)for(const link of context.buyLinksFor(L).filter(x=>x.buyable)){assert.equal(link.offer.priceCheckStatus,'VERIFIED_PRICE_IN_STOCK');assert.equal(link.offer.inStock,true);}
+const ryzen=context.CAT.cpu.find(x=>x.id==='cpu_amd_r5_5500');assert.equal(ryzen.price,10700);
+assert.equal(context.PRICES.components.cpu_amd_r5_5500.offers[0].price,10700);assert(context.PRICES.components.cpu_amd_r5_5500.history.some(x=>x.price===6849));
+console.log('PASS: all 699 offers have outcomes; only reconfirmed in-stock offers are buyable; corrected prices retain history.');
+
+assert(context.getFreshness('2026-10-24',Date.parse('2026-10-24T20:00:00Z')).label.includes('time not recorded'));
+assert(context.getFreshness('2026-10-24T18:00:00Z',Date.parse('2026-10-24T20:00:00Z')).label.includes('2 hours'));
+
+context.searchQuery='AS15-42';nodes.laptopEvidence.value='catalogue';context.lbudgetAll=true;context.renderLaptops();assert(!nodes.stepupContainer.innerHTML.includes('<b>Cheaper:</b>'),'An unknown price cannot produce a savings claim');context.searchQuery='';

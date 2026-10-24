@@ -8,14 +8,14 @@ for(const L of data.laptops){const claims=[];function add(field,value,source=L.s
 if(Array.isArray(value)&&!value.length)status='MISSING';
 if(field.startsWith('scores.')||['strengths','downsides','gpuTier','categoryTags'].includes(field)){status=status==='MISSING'?status:'EDITORIAL_NOT_BENCHMARKED';note='Editorial assessment, not a measured result.';}
 const proof=L.fieldEvidence&&L.fieldEvidence[field];if(proof&&proof.sourceUrl&&proof.checkedAt){status=proof.status||'MANUFACTURER_CONFIRMED';source=proof.sourceUrl;checkedAt=proof.checkedAt;note=proof.scope;}
-if(field.startsWith('offers.')){note='Dated retailer observation; not independently verified by this inventory or guaranteed at checkout.';}
+if(field.startsWith('offers.')){note='Dated retailer observation; not a checkout guarantee.';const parts=field.split('.'),offer=data.prices.laptops[L.id]?.offers?.[Number(parts[1])];if(offer?.priceCheckStatus){if(/^VERIFIED_PRICE_/.test(offer.priceCheckStatus)&&['price','sku','inStock'].includes(parts[2])&&value!==null&&value!==undefined){status='RETAILER_PRICE_CHECKED';checkedAt=offer.priceAttemptedAt;note='Exact-model displayed price or availability checked on the product page; other specifications and checkout are not certified.';}else if(!/^VERIFIED_PRICE_/.test(offer.priceCheckStatus)){status='PRICE_RECHECK_REQUIRED';note=offer.priceCheckNote||offer.priceCheckStatus;checkedAt=offer.priceAttemptedAt;}}}
 if(status==='MISSING')note='No value recorded. This does not establish absence of the feature.';
 const row={field,value:value===undefined?null:value,status,source,checkedAt,note};claims.push(row);rows.push({id:L.id,model:L.brand+' '+L.modelName,...row});}
 for(const field of fields)add(field,L[field]);for(const [key,value] of Object.entries(L.scores||{}))add('scores.'+key,value);
-const price=data.prices.laptops[L.id];for(const [i,offer] of (price?.offers||[]).entries())for(const key of ['p','inStock','sku','exactSkuMatch','configurationVerified','sourceQuality','linkStatus'])add('offers.'+i+'.'+key,offer[key],offer.sourceUrl||'');
+const price=data.prices.laptops[L.id];for(const [i,offer] of (price?.offers||[]).entries())for(const key of ['price','inStock','sku','exactSkuMatch','configurationVerified','sourceQuality','linkStatus'])add('offers.'+i+'.'+key,offer[key],offer.sourceUrl||'');
 records.push({id:L.id,model:L.brand+' '+L.modelName,pn:L.pn,source:L.specSource||'',claims});}
 const counts={};for(const row of rows)counts[row.status]=(counts[row.status]||0)+1;
-const result={checkedAt:'2026-10-24',method:'Complete stored-claim inventory; selective external verification. Pending claims have NOT been certified.',recordCount:records.length,claimCount:rows.length,counts,records};
+const result={checkedAt:'2026-10-24',method:'Complete stored-claim inventory; selective external verification. Pending claims have NOT been certified.',recordCount:records.length,claimCount:rows.length,counts,priceSummary:data.priceRecheckAudit||null,records};
 assert.equal(records.length,636);assert.equal(new Set(records.map(x=>x.id)).size,636);assert.equal(rows.filter(x=>x.status==='MANUFACTURER_CONFIRMED').length,9*14+24*4);assert(rows.some(x=>x.value===false&&x.status==='PENDING_INDEPENDENT_REVIEW'));
 const dictionaries={fields:[],statuses:[],sources:[],notes:[]};
 function intern(key,value){let i=dictionaries[key].indexOf(value);if(i<0){i=dictionaries[key].length;dictionaries[key].push(value);}return i;}
