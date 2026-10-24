@@ -13,6 +13,8 @@ for(const {laptop,priceRecord} of additions){
   const history=[...old?.history||[],...priceRecord.history||[]];
   data.prices.laptops[laptop.id]={...priceRecord,history:history.filter((x,i)=>history.findIndex(y=>JSON.stringify(y)===JSON.stringify(x))===i)};
 }
+const corrections=JSON.parse(fs.readFileSync(path.join(root,'data/laptop-corrections-2026-10-24.json'),'utf8'));
+for(const correction of corrections){const L=data.laptops.find(x=>x.id===correction.id);if(!L)throw Error('Missing corrected record '+correction.id);Object.assign(L,correction.values);L.fieldEvidence={...L.fieldEvidence,...correction.fieldEvidence};if(correction.values.pn){for(const offer of [...L.offers||[],...data.prices.laptops[L.id]?.offers||[]]){offer.sku=correction.values.pn;offer.skuCorrectedAt='2026-10-24';offer.skuSourceUrl=correction.fieldEvidence.pn.sourceUrl;}}}
 const ids=new Set();
 for(const L of data.laptops){if(ids.has(L.id))throw new Error('Duplicate id '+L.id);ids.add(L.id);}
 const offers=Object.values(data.prices.laptops).flatMap(x=>x.offers||[]);

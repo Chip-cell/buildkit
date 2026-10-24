@@ -92,3 +92,19 @@ assert.equal(selected,controls[2]);assert.equal(controls[2].attrs['aria-selected
 context.document.querySelectorAll=query;
 console.log('Records requiring model/CPU review:',context.LAPTOPS.filter(L=>context.laptopRecordIssues(L).length).length);
 console.log(`PASS: ${scripts} scripts; ${expected} unique records; ${additions.length} sourced additions; evidence, stock, search, pagination, budget ceilings, comparison, landing tabs and 9 desktop profiles.`);
+
+const legacy=context.LAPTOPS.filter(L=>!L.rankingStatus);
+assert(legacy.every(L=>!context.hasLaptopRanking(L)),'Legacy editorial scores cannot establish benchmark-backed rankings');
+const neo=context.LAPTOPS.filter(L=>L.brand==='Apple'&&/MacBook Neo/.test(L.modelName));
+assert.equal(neo.length,9);
+for(const L of neo){assert.equal(L.batteryWh,36.5);assert.equal(L.weight,1.23);assert.equal(L.brightness,500);assert.equal(L.res,'2408 × 1506');assert(L.ports.includes('480Mbps'));assert.equal(L.fieldEvidence.batteryWh.sourceUrl,'https://www.apple.com/in/macbook-neo/specs/');}
+const neoCompare=context.buildCompareTable(neo.slice(0,2).map(L=>L.id),context.LAPTOPS,context.CAT,{},100000,1080,'aaa');
+assert(!/BEST GAMING|BEST VALUE|Strongest creator|BEST FOR YOUR/.test(neoCompare));
+assert(neoCompare.includes("scope='row'"));assert(neoCompare.includes('36.5Wh'));assert(neoCompare.includes('No benchmark-based value verdict'));
+assert.equal(context.laptopUpgradeability({storageSlots:2}).parts[0],'at least two storage slots; free slot not confirmed');
+assert(context.sourceBox(neo[0]).includes('Field checks'));
+console.log('PASS: legacy-score safeguards, 9 Neo hardware corrections, source provenance and comparison wording.');
+
+assert(!neoCompare.includes('LOWEST RECORDED WEIGHT'),'Equal weights should not manufacture a distinguishing badge');
+
+assert.equal(context.validateBuildKitData(context.CAT,context.LAPTOPS,context.PRICES).errors.length,0,'SKU corrections must reach current offer records');
