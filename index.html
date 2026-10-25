@@ -985,22 +985,6 @@ footer li{margin-bottom:8px;list-style:none}
 .cmp-scroll .cmp tbody tr:nth-child(even) td{background:var(--panel)}
 .cmp-scroll:focus-visible{outline:3px solid var(--copper);outline-offset:3px}
 @media(max-width:600px){.cmp-scroll .cmp td{min-width:225px;font-size:13px;line-height:1.6}.cmp-scroll .cmp th{font-size:10px;padding:12px 8px}}
-
-.buying-evidence{font-size:12px;line-height:1.6;margin:12px 0 0;display:grid;gap:5px}
-.buying-evidence div{display:grid;grid-template-columns:115px minmax(0,1fr);gap:8px}
-.buying-evidence dt{color:var(--muted);font-weight:400}.buying-evidence dd{margin:0;overflow-wrap:anywhere}
-.buying-evidence a,.laptop-utilities a,.laptop-utilities button{color:var(--copper-dk)}
-.buying-advice{margin:12px 0;padding:12px;border:1px solid var(--line);border-radius:6px;font-size:13px;line-height:1.6}
-.buying-advice p+p{margin-top:9px}.buying-advice b{display:block}.buying-advice small{display:block;color:var(--muted);margin-top:9px}
-.laptop-utilities{display:flex;gap:8px 14px;flex-wrap:wrap;margin-top:12px;font-size:12px}
-.laptop-utilities button{background:none;border:0;text-decoration:underline;font:inherit;cursor:pointer;padding:0;min-height:36px}
-.laptop-utilities a{display:inline-flex;align-items:center;min-height:36px}
-.shortlist-control{border:1px solid var(--line);padding:16px;margin:18px 0;border-radius:8px;background:var(--surface)}
-.shortlist-control label{display:flex;align-items:center;gap:10px;font-weight:650;min-height:32px}.shortlist-control p{font-size:13px;color:var(--muted);margin-top:6px;max-width:85ch}
-.cmp-details{margin:18px 0}.cmp-details summary{cursor:pointer;padding:14px 0;font-weight:600}
-.cmp-actions{margin:12px 0}.cmp-actions p{font-size:12px;color:var(--muted);margin-top:8px}
-@media(max-width:700px){.cmp-scroll table{min-width:540px}.cmp-scroll .buying-evidence div{display:block}.cmp-scroll .buying-evidence dd{margin-bottom:8px}}
-
 </style>
 </head>
 <body>
@@ -1200,7 +1184,6 @@ footer li{margin-bottom:8px;list-style:none}
            stopped producing those (laptopFinderGrouped returns them empty), so it described
            sections that never appear. -->
       <p class="sec-lead">Compare exact configurations, inspect the trade-offs, and check where each price came from. Recommendations are editorial estimates, not measured benchmarks.</p>
-      <div class="shortlist-control"><label><input type="checkbox" id="focusedShortlist" checked> Focused shortlist</label><p>Eight selected configurations with dated SKU, CPU, RAM-capacity and screen-size checks, plus eligible product-page price evidence. Other specifications and performance still need review. Uncheck to browse the full catalogue.</p></div>
       <div class="finder-search"><label for="catalogSearchInput">Search the laptop catalogue</label><input type="search" id="catalogSearchInput" placeholder="Try: Lenovo LOQ, Ryzen 7, RTX 4060, or an exact model number" autocomplete="off"><p>Search terms match model, brand, processor, graphics and SKU.</p></div>
       <!-- §2 — computed live from LAPTOPS.length and getFreshness(), never a hardcoded count/age. -->
       <div class="lcat-status" id="laptopCatalogueStatus" role="status" aria-live="polite"></div>
@@ -4448,7 +4431,6 @@ function laptopFinderGrouped(budget,LAPTOPS,use,priority,sort){
   var need2in1=(luc==="2in1");
   LAPTOPS.forEach(function(L){
     if(!laptopPassesFilters(L))return;
-    var focus=byId("focusedShortlist");if(focus&&focus.checked&&!inBuyingShortlist(L))return;
     if(need2in1&&L.twoInOne!==true)return;
     /* Screen size is filtered once, by the visible chip row, inside laptopPassesFilters().
        The lpri "size14"/"size16" entries used to hard-filter here as well; they now only
@@ -4762,25 +4744,17 @@ function buildCompareTable(values,LAPTOPS,CAT,deskSel,deskBudget,deskRes,deskUse
     return {id:L.id,title:L.brand+" "+L.modelName,price:laptopBuyPrice(L),cpu:L.cpu||"Not published",gpu:(L.gpu||"Not published")+(Number.isFinite(L.tgp)?" · "+L.tgp+"W TGP":""),ram:[L.ram,L.ramType].filter(Boolean).join(" ")||"Not published",ssd:L.ssd||"Not published",display:[Number.isFinite(L.dispSize)?L.dispSize+"″":null,L.res,L.panelType,Number.isFinite(L.brightness)?L.brightness+" nits":null].filter(Boolean).join(" · ")||"Not published",battery:Number.isFinite(L.batteryWh)?L.batteryWh+"Wh":"Not published",weight:Number.isFinite(L.weight)?L.weight+"kg":"Not published",connectivity:[L.ports,L.wifi].filter(Boolean).join(" · ")||"Not published",upgrade:laptopUpgradeability(L).summary};
   }).filter(Boolean);
   if(systems.length<2)return "<p class='sec-lead'>Select at least two systems to compare.</p>";
-
-  var rows=[["Price","price"],["CPU","cpu"],["GPU","gpu"],["RAM","ram"],["Storage","ssd"],["Display","display"],["Battery capacity","battery"],["Weight","weight"],["Connectivity","connectivity"],["Upgradeability","upgrade"]];
-  function value(s,key){return key==='price'?(Number.isFinite(s.price)?fmt(s.price):'PRICE NOT VERIFIED'):s[key];}
-  var different=[],same=[];
-  rows.forEach(function(row){(new Set(systems.map(function(s){return String(value(s,row[1]));})).size>1?different:same).push(row);});
-  function table(list,caption){
-    if(!list.length)return "<p class='card-date'>No recorded differences in these fields. Missing details do not establish that the systems are equivalent.</p>";
-    return "<div class='cmp-scroll' tabindex='0' role='region' aria-label='"+caption+"'><table class='cmp'><caption class='sr-only'>"+caption+"</caption><thead><tr><th scope='col'>Metric</th>"+
-      systems.map(function(s){return "<th scope='col'>"+esc(s.title)+"</th>";}).join('')+"</tr></thead><tbody>"+
-      list.map(function(row){return "<tr><th scope='row'>"+row[0]+"</th>"+systems.map(function(s){return "<td>"+esc(value(s,row[1]))+"</td>";}).join('')+"</tr>";}).join('')+"</tbody></table></div>";
-  }
-  var share="<button type='button' class='btn' data-copy-link='"+esc(comparisonPermalink(systems.map(function(s){return s.id||'desktop';})))+"'>Copy comparison link</button>";
-  var evidence="<div class='cmp-scroll' tabindex='0' role='region' aria-label='Comparison sources'><table class='cmp'><thead><tr><th scope='col'>Evidence</th>"+systems.map(function(s){return "<th scope='col'>"+esc(s.title)+"</th>";}).join('')+"</tr></thead><tbody><tr><th scope='row'>Price, SKU and sources</th>"+systems.map(function(s){var L=s.id&&LAPTOPS.find(function(L){return L.id===s.id;});return "<td>"+(L?laptopBuyingEvidence(L)+"<a href='audit.html?id="+encodeURIComponent(L.id)+"'>Inspect claims and sources ↗</a>":'See sources for each component in the builder')+"</td>";}).join('')+"</tr></tbody></table></div>";
-  return "<div class='cmp-actions'>"+share+"<p>Differences first. Swipe horizontally to see each system; row labels stay visible. Prices are dated observations, not live quotes.</p></div>"+
-    "<h3>Recorded differences</h3>"+table(different,'Recorded specification differences')+
-    "<details class='cmp-details'><summary>Matching and unknown details ("+same.length+" fields)</summary>"+table(same,'Matching and unknown specifications')+"</details>"+
-    "<details class='cmp-details'><summary>Price dates, exact SKUs and sources</summary>"+evidence+"</details>"+
-    "<div class='why-build-box'><h4>Comparison summary</h4><p><b>No automatic performance verdict.</b> No benchmark-based value verdict. Comparable performance evidence is incomplete. Check exact-configuration benchmarks and application compatibility before choosing. Unknown fields are not negative results.</p></div>";
-
+  var rows=[["Price","price"],["CPU","cpu"],["GPU","gpu"],["RAM","ram"],["Storage","ssd"],["Display","display"],["Battery capacity","battery"],["Weight","weight"],["Connectivity","connectivity"],["Upgradeability","upgrade"],["Creator suitability","creator"],["Value","value"],["Sources","evidence"]];
+  var html="<p class='card-date'>Compare recorded specifications. Swipe horizontally to see each system; row labels stay visible. Prices are dated observations, not live quotes.</p><div class='cmp-scroll' tabindex='0' role='region' aria-label='Scrollable comparison table'><table class='cmp'><caption class='sr-only'>System specifications and evidence limitations</caption><thead><tr><th scope='col'>Metric</th>"+systems.map(function(s){return "<th scope='col'>"+esc(s.title)+"</th>";}).join("")+"</tr></thead><tbody>";
+  rows.forEach(function(row){
+    html+="<tr><th scope='row'>"+row[0]+"</th>";
+    systems.forEach(function(s){
+      var key=row[1],value=key==="price"?(Number.isFinite(s.price)?fmt(s.price):"PRICE NOT VERIFIED"):key==="creator"?"Check app compatibility and workload benchmarks":key==="value"?"No benchmark-based value verdict":s[key];
+      html+="<td>"+(key==="evidence"?(s.id?"<a href='audit.html?id="+encodeURIComponent(s.id)+"'>Inspect claims and sources ↗</a>":"See sources for each component in the builder"):esc(value))+"</td>";
+    });html+="</tr>";
+  });
+  // Editorial scores and GPU type alone cannot establish measured performance winners.
+  return html+"</tbody></table></div><div class='why-build-box'><h4>Comparison summary</h4><p><b>No automatic performance verdict.</b> Comparable performance evidence is incomplete. Check exact-configuration benchmarks and application compatibility before choosing. Unknown fields are not negative results.</p></div>";
 }
 
 </script>
@@ -5449,26 +5423,11 @@ var currentTab="home",dirty={laptop:false,compare:false};
 /* A share link always carries b= (see shareHash()). Every other hash is a tab name or a
    guide anchor the app writes itself while you navigate. */
 function isShareHash(){
-  try{return new URLSearchParams((location.hash||"").slice(1).split('?').pop()).has("b");}catch(e){return false;}
+  try{return new URLSearchParams((location.hash||"").slice(1)).has("b");}catch(e){return false;}
 }
 function routeFromHash(){
   var h=(location.hash||"").replace("#","").split("?")[0];
   var valid=["home","build","laptop","quiz","compare","guide"];
-  var params=new URLSearchParams((location.hash||'').split('?')[1]||'');
-  if(window.closeLaptopModal)window.closeLaptopModal(true);
-  if(h==='laptop'&&params.has('id')){
-    switchTab('laptop',false,true);
-    var model=LAPTOPS.find(function(L){return L.id===params.get('id');});
-    if(model)openLaptop(model.id,true);
-    else{var notice=byId('lresultsStatus');if(notice)notice.textContent='This laptop link is no longer in the catalogue. Search for another configuration.';}
-    return;
-  }
-  if(h==='compare'&&params.has('ids')){
-    cmpSlots=Array.from(new Set(params.get('ids').split(',').filter(function(id){return id==='desktop'||LAPTOPS.some(function(L){return L.id===id;});}))).slice(0,3);
-    while(cmpSlots.length<3)cmpSlots.push('');
-    if(params.has('b')){restore();resolveRestoredManual();validateRestoredDesktopBuild();renderDesktop();}
-    switchTab('compare',false,true);fillCompare();return;
-  }
   if(valid.indexOf(h)>=0){switchTab(h,false,true);return;}
   /* A shared build used to open on Home, so the person it was sent to never saw it. */
   if(isShareHash()){if(currentTab!=="build")switchTab("build",false,true);return;}
@@ -5484,7 +5443,6 @@ function routeFromHash(){
   requestAnimationFrame(function(){target.scrollIntoView({behavior:"auto",block:"start"});});
 }
 window.addEventListener("popstate",function(){routeFromHash();});
-window.addEventListener("hashchange",function(){routeFromHash();});
 
 function buildState(){return {version:6,budget:budget,uc:uc,res:res,homeBudget:homeBudget,homeUc:homeUc,homeRes:homeRes,completeSetup:completeSetup,includeWindows:includeWindows,wifiReq:wifiReq,manual:manualToIds(manual),locked:lockedMap,owned:ownedMap,lbudget:lbudget,luc:luc,lpri:lpri};}
 /* THE LOST-PICKS BUG. `manual` holds catalogue INDEXES while the page runs, and it was
@@ -5604,7 +5562,7 @@ function restore(){
      a reload on the Build tab reset Wi-Fi, complete setup, Windows and every locked,
      owned and hand-picked part to empty, then persisted that over the saved build. Only a
      real share link (which always carries b=) may override saved state. */
-  if(!isShareHash())return;var p=new URLSearchParams(location.hash.slice(1).split('?').pop());budget=clampDesktopBudget(p.get("b")||budget);res=safeNum(p.get("r"),DESKTOP_RES,res);uc=safeEnum(p.get("u"),DESKTOP_USES,uc);completeSetup=p.get("c")==="1";includeWindows=p.get("w")==="1";wifiReq=p.get("f")==="1";try{
+  if(!isShareHash())return;var p=new URLSearchParams(location.hash.slice(1));budget=clampDesktopBudget(p.get("b")||budget);res=safeNum(p.get("r"),DESKTOP_RES,res);uc=safeEnum(p.get("u"),DESKTOP_USES,uc);completeSetup=p.get("c")==="1";includeWindows=p.get("w")==="1";wifiReq=p.get("f")==="1";try{
     /* A share link is attacker-controllable. Parse, then keep only recognised slots and
        well-formed component ids; validateRestoredDesktopBuild() drops anything that is
        shaped right but does not exist in the catalogue. */
@@ -6199,41 +6157,6 @@ function renderCompareTray(){
     laptopCompareSel=[];renderCompareTray();
   });
 }
-
-// Keep this reviewed set small; dates and individual field checks remain visible.
-var BUYING_SHORTLIST=['lap_acer_un_35msi_012','lap_acer_un_38gsi_004','lap_acer_un_37qsi_005','lap_acer_un_37rsi_003','lap_asus_x1607ca_mb350ws','lap_acer_un_u7psi_008','lap_asus_ga403um_qs007ws','lap_asus_fa608pp_qt014ws'];
-function inBuyingShortlist(L){
-  return BUYING_SHORTLIST.indexOf(L.id)>=0&&L.exact===true&&!!normalizeExternalUrl(L.specSource)&&!laptopRecordIssues(L).length&&
-    ['pn','cpu','ramGB','dispSize'].every(function(k){return L.fieldEvidence&&L.fieldEvidence[k]&&L.fieldEvidence[k].checkedAt;})&&
-    buyLinksFor(L).some(function(x){return x.buyable&&offerTrust(x.offer)==='TRUSTED';});
-}
-function laptopPermalink(id){return '#laptop?id='+encodeURIComponent(id);}
-function comparisonPermalink(ids){var chosen=ids.filter(Boolean).slice(0,3);return '#compare?ids='+chosen.map(encodeURIComponent).join(',')+(chosen.indexOf('desktop')>=0?'&'+shareHash():'');}
-function laptopReportLink(L){
-  var body='Laptop: '+L.brand+' '+L.modelName+'\nExact SKU: '+(L.pn||'Not recorded')+'\nLink: https://www.buildkit.co.in/index.html'+laptopPermalink(L.id)+'\n\nIncorrect field:\nSuggested correction:\nSupporting source URL:\n';
-  return 'mailto:buildkitindia@gmail.com?subject='+encodeURIComponent('BuildKit correction: '+(L.pn||L.modelName))+'&body='+encodeURIComponent(body);
-}
-function laptopBuyingEvidence(L){
-  var status=laptopPriceStatus(L),links=buyLinksFor(L),priced=links.filter(function(x){return x.buyable&&x.offer.p===status.price;})[0];
-  var ref=priced||links.filter(function(x){return Number.isFinite(status.price)&&x.offer.p===status.price;})[0];
-  var o=ref&&ref.offer,url=normalizeExternalUrl(o&&o.sourceUrl),spec=normalizeExternalUrl(L.specSource);
-  return "<dl class='buying-evidence'><div><dt>Exact SKU</dt><dd>"+esc(L.pn||'Not recorded')+"</dd></div>"+
-    "<div><dt>Price observed</dt><dd>"+esc(o&&o.checkedAt?snapshotDateLabel(o.checkedAt):'Not recorded for this price')+"</dd></div>"+
-    "<div><dt>Price source</dt><dd>"+(url?"<a href='"+esc(url)+"' target='_blank' rel='noopener noreferrer'>"+esc(o.retailer||'Recorded retailer')+" ↗</a>":'No matching retailer observation')+"</dd></div>"+
-    "<div><dt>Specification source</dt><dd>"+(spec?"<a href='"+esc(spec)+"' target='_blank' rel='noopener noreferrer'>Recorded specification page ↗</a>":'Not recorded')+"</dd></div></dl><p class='card-date'>Dated observation; confirm price and stock before buying.</p>";
-}
-function laptopBuyingAdvice(L){
-  var why=(L.strengths||[])[0]||'Check whether the recorded CPU, memory and display meet your needs; suitability has not been assessed.';
-  var compromise=(L.downsides||[])[0]||laptopUpgradeability(L).summary;
-  return "<div class='buying-advice'><p><b>Why choose this</b> "+esc(why)+"</p><p><b>Main compromise</b> "+esc(compromise)+"</p><small>Based on recorded specifications, not independent performance tests.</small></div>";
-}
-function laptopUtilityLinks(L){return "<div class='laptop-utilities'><a href='"+esc(laptopPermalink(L.id))+"'>Open laptop link</a><button type='button' data-copy-link='"+esc(laptopPermalink(L.id))+"'>Copy link</button><a href='"+esc(laptopReportLink(L))+"'>Report incorrect information</a></div>";}
-async function copyBuyingLink(hash,button){
-  var url=new URL(hash,location.href).href;
-  try{if(!navigator.clipboard||!navigator.clipboard.writeText)throw new Error('Clipboard unavailable');await navigator.clipboard.writeText(url);button.textContent='Link copied';}
-  catch(e){window.prompt('Copy this link',url);}
-}
-
 function renderLaptopCard(L,badge){
   var status=laptopPriceStatus(L),p=laptopBuyPrice(L),over=(p===null)?null:p-lbudget,warning=laptopValueWarning(L),valueBadge=warning?"":laptopValueBadge(L),up=laptopUpgradeability(L);
   var labels=(LBEST[L.id]||[]).map(function(x){return "<span class='bestat'>"+esc(x)+"</span>";}).join("");
@@ -6265,7 +6188,14 @@ function renderLaptopCard(L,badge){
     :status.kind==="REFERENCE"&&Number.isFinite(status.price)
     ?"<span class='amt'>"+money(status.price)+"</span><span class='ev-badge ev-stale'>Reference price</span><span class='conf-note'>"+esc(status.detail)+"</span>"
     :"<span class='amt none'>PRICE NOT VERIFIED</span><span class='conf-note'>"+esc(status.detail)+"</span>";
-  var recordIssues=laptopRecordIssues(L);
+  /* §6/§10 — "why it fits" is up to 2 published strengths; "trade-off" is exactly one
+     published downside. Both come straight from the exact-model record, never invented. */
+  var fits=(L.strengths||[]).slice(0,2),tradeoff=(L.downsides||[])[0],recordIssues=laptopRecordIssues(L);
+  /* One line each, clipped, with the full sentence on hover and in the modal. Two
+     multi-line boxes made every card a different height and the grid rows ragged. */
+  var fitBlock=
+    (fits.length?"<p class='fit-line' title='"+esc(fits.join(" \u00B7 "))+"'><b>Fits</b> "+esc(fits[0])+"</p>":"")+
+    (tradeoff?"<p class='fit-line trade' title='"+esc(tradeoff)+"'><b>Trade-off</b> "+esc(tradeoff)+"</p>":"");
   var best=(typeof buyLinksFor==="function"?buyLinksFor(L):[]).filter(function(x){return x.buyable&&x.url;})[0];
   var inCompare=(typeof laptopCompareSel!=="undefined"&&laptopCompareSel.indexOf(L.id)>=0);
   /* The buy button names the retailer it actually goes to. 103 records are sourced from
@@ -6305,17 +6235,17 @@ function renderLaptopCard(L,badge){
     "<h4 class='lcard-title'>"+esc(L.modelName)+"</h4>"+
     /* Price is the first thing under the title now: it is the single figure every visitor
        is scanning for, and it used to sit below four blocks of prose at the card foot. */
-    "<div class='lcard-price'>"+priceBlock+laptopBuyingEvidence(L)+"</div>"+
+    "<div class='lcard-price'>"+priceBlock+"</div>"+
     "<div class='lcard-meta'><span class='pn'>PN: "+esc(L.pn)+"</span>"+catalogueBadge+"</div>"+
     (recordIssues.length?"<p class='record-note'>"+esc(recordIssues.join(" · "))+". Excluded from purchase recommendations.</p>":"")+
     "<ul class='mini-list specs'>"+laptopVerifiedFacts(L,true)+"</ul>"+
     (laptopCheckedDate(L)?"<p class='card-date'>Source recorded "+esc(snapshotDateLabel(laptopCheckedDate(L)))+"</p>":"")+
     upgradeMeter+
-    laptopBuyingAdvice(L)+
+    fitBlock+
     (!hasLaptopRanking(L)?"<p class='card-date'>Performance ranking not assessed</p>":"")+
     (warning?"<p class='value-warning'>"+esc(warning)+"</p>":"")+
     (valueBadge?"<p class='value-badge'>"+esc(valueBadge)+"</p>":"")+
-    sourceBox(L)+actions+laptopUtilityLinks(L)+"</article>";
+    sourceBox(L)+actions+"</article>";
 }
 
 /* §16 — labels are computed against the CURRENT filtered shortlist only, never claimed
@@ -6668,7 +6598,7 @@ function renderLaptops(showMore){
   persist();
 }
 var lastModalTrigger=null,lastModalLaptopId=null;
-function openLaptop(id,skipRoute){
+function openLaptop(id){
   lastModalTrigger=document.activeElement;lastModalLaptopId=id;
   var L=LAPTOPS.find(function(x){return x.id===id;});if(!L)return;var mstatus=laptopPriceStatus(L),conf=confOf(L),p=laptopBuyPrice(L),priced=LAPTOPS.filter(function(x){return laptopBuyPrice(x)!==null&&x.id!==L.id;});
   /* Sorted by priceOf() while filtered by laptopBuyPrice() -- two different prices -- and
@@ -6702,7 +6632,7 @@ function openLaptop(id,skipRoute){
     ? "<p><a class='btn' href='"+esc(buildAffiliateUrl(best.url))+"' target='_blank' rel='"+BUY_REL+"'>View best current store \u2192</a></p>"
     : "<p class='fineprint'><b>NO VERIFIED BUY LINK.</b> The recorded price, stock or link evidence does not meet the purchase-offer checks. Review the observations above and confirm the exact SKU with the retailer.</p>";
   var up=laptopUpgradeability(L);
-  byId("modalContent").innerHTML="<div class='eyebrow'>"+esc(L.brand)+" · exact configuration</div><h2 id='modalTitle'>"+esc(L.modelName)+"</h2><div class='pn'>Exact SKU: "+esc(L.pn)+"</div>"+"<div class='lcard-price'><span class='amt'>"+money(mstatus.price)+"</span><span class='conf-line'>"+esc(mstatus.headline)+"</span>"+laptopBuyingEvidence(L)+"</div>"+laptopBuyingAdvice(L)+laptopUtilityLinks(L)+"<div class='modal-grid'><div><h4>Published specifications</h4><ul class='mini-list'>"+laptopVerifiedFacts(L,false)+"</ul><div class='upgrade-score'><b>CONFIRMED UPGRADE DETAILS</b><span>"+esc(up.summary)+"</span></div><p class='verified-facts-note'>Only facts published for this exact configuration are shown. Fields absent from the manufacturer page are omitted.</p><h4>Recorded price observations</h4><ul class='mini-list'>"+offers+"</ul>"+buyAction+"</div><div><h4>Strengths</h4><div class='side-note'>"+(L.strengths||[]).map(function(x){return "• "+esc(x);}).join("<br>")+"</div><h4>Downsides</h4><div class='mistake'>"+(L.downsides||[]).map(function(x){return "• "+esc(x);}).join("<br>")+"</div><h4>Who should buy it</h4><p>"+esc(uses)+".</p><h4>Who should skip it</h4><p>Skip it if this trade-off matters: "+esc(skip)+".</p><div class='priceblk'><span class='amt'>"+money(mstatus.price)+"</span>"+
+  byId("modalContent").innerHTML="<div class='eyebrow'>"+esc(L.brand)+" · exact configuration</div><h2 id='modalTitle'>"+esc(L.modelName)+"</h2><div class='pn'>Exact SKU: "+esc(L.pn)+"</div><div class='modal-grid'><div><h4>Published specifications</h4><ul class='mini-list'>"+laptopVerifiedFacts(L,false)+"</ul><div class='upgrade-score'><b>CONFIRMED UPGRADE DETAILS</b><span>"+esc(up.summary)+"</span></div><p class='verified-facts-note'>Only facts published for this exact configuration are shown. Fields absent from the manufacturer page are omitted.</p><h4>Recorded price observations</h4><ul class='mini-list'>"+offers+"</ul>"+buyAction+"</div><div><h4>Strengths</h4><div class='side-note'>"+(L.strengths||[]).map(function(x){return "• "+esc(x);}).join("<br>")+"</div><h4>Downsides</h4><div class='mistake'>"+(L.downsides||[]).map(function(x){return "• "+esc(x);}).join("<br>")+"</div><h4>Who should buy it</h4><p>"+esc(uses)+".</p><h4>Who should skip it</h4><p>Skip it if this trade-off matters: "+esc(skip)+".</p><div class='priceblk'><span class='amt'>"+money(mstatus.price)+"</span>"+
       "<span class='conf-line'>"+esc(mstatus.headline)+"</span>"+
       "<span class='conf-note'>"+esc(mstatus.detail)+"</span>"+
       "<details class='srcbox'><summary>What does this mean?</summary><dl>"+
@@ -6711,7 +6641,6 @@ function openLaptop(id,skipRoute){
         "<dt>Indicative price</dt><dd>A figure we hold, but no current exact-SKU page confirms it. Not used for budget matching.</dd>"+
         "<dt>Price not verified</dt><dd>BuildKit has no trustworthy live purchase price for this configuration.</dd>"+
       "</dl></details></div><div class='stepup-box'><b>Cheaper alternative:</b> "+(cheaper?esc(cheaper.modelName)+" saves "+fmt(p-laptopBuyPrice(cheaper))+".":"No cheaper verified exact configuration is recorded for this result.")+"</div><div class='stepup-box'><b>Better option for more:</b> "+(better?esc(better.modelName)+" costs "+fmt(laptopBuyPrice(better)-p)+" more.":"No assessed upgrade is established within ₹25,000.")+"</div></div></div>";
-  if(!skipRoute){try{history.pushState(null,"",laptopPermalink(id));}catch(e){}}
   byId("laptopModal").classList.add("open");
   byId("laptopModal").setAttribute("aria-hidden","false");
   ["main","footer","header.site"].forEach(function(sel){var x=document.querySelector(sel);if(x&&!x.contains(byId("laptopModal")))x.setAttribute("inert","");});
@@ -6889,7 +6818,7 @@ function scoreQuiz(){
 }
 
 function updateCompare(){if(!CAT||!LAPTOPS.length)return;byId("cmpOut").innerHTML=buildCompareTable(cmpSlots,LAPTOPS,CAT,sel,budget,res,uc);}
-function fillCompare(){["cmpA","cmpB","cmpC"].forEach(function(id,i){var e=byId(id);e.innerHTML="<option value=''>— Select system —</option><option value='desktop'>Current desktop build</option>"+LAPTOPS.map(function(L){return "<option value='"+L.id+"'>"+L.brand+" "+L.modelName+" · "+money(laptopBuyPrice(L))+"</option>";}).join("");e.value=cmpSlots[i];e.onchange=function(){cmpSlots[i]=e.value;updateCompare();};});updateCompare();}
+function fillCompare(){["cmpA","cmpB","cmpC"].forEach(function(id,i){var e=byId(id);e.innerHTML="<option value=''>— Select system —</option><option value='desktop'>Current desktop build</option>"+LAPTOPS.map(function(L){return "<option value='"+L.id+"'>"+L.brand+" "+L.modelName+" · "+money(laptopBuyPrice(L))+"</option>";}).join("");e.value=cmpSlots[i];e.addEventListener("change",function(){cmpSlots[i]=e.value;updateCompare();});});updateCompare();}
 
 function renderGuidePicks(){var priced=[];[CAT.cpu,CAT.gpu,CAT.ram,CAT.ssd].forEach(function(group){var x=group.find(function(v){return v.status==="CURRENT"&&componentPrice(v)!==null;});if(x)priced.push("<b>"+x.n+"</b> · "+money(componentPrice(x)));});byId("dynamicPicksContainer").innerHTML="<b>Dated market examples · "+esc(snapshotDateLabel(COMPONENT_PRICE_LAST_VERIFIED))+":</b> "+priced.join(" · ")+". These references come from the shared price database, not the timeless guide text.";}
 
@@ -6930,10 +6859,6 @@ function bindHomeTabs(selector,onSelect){
   });
 }
 function bind(){
-  var focus=byId('focusedShortlist');if(focus)focus.addEventListener('change',function(){renderLaptops();});
-  document.addEventListener('click',function(event){
-    var button=event.target.closest('[data-copy-link]');if(button){copyBuyingLink(button.getAttribute('data-copy-link'),button);}
-  });
   bindHomeTabs("[data-lesson]",function(button){
     var name=button.dataset.lesson;
     document.querySelectorAll(".lesson-panel").forEach(function(panel){panel.hidden=panel.id!=="lesson-"+name;});
@@ -7051,7 +6976,7 @@ byId("homeBudget").addEventListener("input",function(e){
   });
   /* §33 — Esc and outside-click close, focus is trapped while open and returned to the
    button that opened the modal, and the background cannot be reached with Tab. */
-function closeLaptopModal(skipRoute){
+function closeLaptopModal(){
   var m=byId("laptopModal");if(!m.classList.contains("open"))return;
   m.classList.remove("open");m.setAttribute("aria-hidden","true");
   var main=document.querySelector("main"),foot=document.querySelector("footer"),hdr=document.querySelector("header.site");
@@ -7063,7 +6988,6 @@ function closeLaptopModal(skipRoute){
   var back=(lastModalTrigger&&document.contains(lastModalTrigger))?lastModalTrigger
           :(lastModalLaptopId?document.querySelector("[data-laptop='"+lastModalLaptopId+"']"):null);
   if(back&&back.focus)back.focus();
-  if(skipRoute!==true&&/^#laptop\?id=/.test(location.hash)){try{history.replaceState(null,"","#laptop");}catch(e){}}
   lastModalTrigger=null;lastModalLaptopId=null;
 }
 byId("modalCloseBtn").addEventListener("click",closeLaptopModal);
@@ -7197,7 +7121,7 @@ function renderHomeLive(){
 }
 function renderHomeFeatured(){
   var shelf=byId("homeLaptopShelf");if(!shelf)return;
-  var sourced=LAPTOPS.filter(function(L){return inBuyingShortlist(L)&&L.exact===true&&L.generationStatus!=="LEGACY"&&L.ramGB>=16;}).slice().sort(function(a,b){return laptopCheckedDate(b).localeCompare(laptopCheckedDate(a))||(laptopPriceStatus(a).price||Infinity)-(laptopPriceStatus(b).price||Infinity);});
+  var sourced=LAPTOPS.filter(function(L){return L.specCheckedAt&&L.exact===true&&L.generationStatus!=="LEGACY"&&L.ramGB>=16&&!laptopRecordIssues(L).length;}).slice().sort(function(a,b){return laptopCheckedDate(b).localeCompare(laptopCheckedDate(a))||(laptopPriceStatus(a).price||Infinity)-(laptopPriceStatus(b).price||Infinity);});
   var seen={},choices=sourced.filter(function(L){if(seen[L.brand])return false;seen[L.brand]=true;return true;}).slice(0,3);
   shelf.innerHTML=choices.map(function(L){var status=laptopPriceStatus(L),buy=laptopBuyPrice(L);return "<article class='home-laptop-card'><div class='shelf-brand'>"+esc(L.brand)+"<span>"+esc(L.family||"Laptop")+"</span></div><h4>"+esc(L.modelName)+"</h4><div class='shelf-price'>"+money(status.price)+"</div><p class='shelf-evidence'>"+(buy===null?"Reference only · stock not confirmed":"Observed store price · confirm checkout")+"</p><p class='shelf-tradeoff'><b>Check:</b> "+esc((L.downsides||[])[0]||"Confirm the exact configuration before purchase.")+"</p><dl><div><dt>Model</dt><dd>"+esc(L.pn)+"</dd></div><div><dt>Memory / SSD</dt><dd>"+esc(L.ram)+" · "+esc(L.ssd)+"</dd></div><div><dt>Source recorded</dt><dd>"+esc(snapshotDateLabel(L.specCheckedAt))+"</dd></div></dl><button type='button' class='text-link' data-home-laptop='"+esc(L.id)+"'>Understand this configuration →</button></article>";}).join("")||"<p>Open the laptop finder to explore the recorded configurations.</p>";
   shelf.querySelectorAll("[data-home-laptop]").forEach(function(button){button.addEventListener("click",function(){openLaptop(button.dataset.homeLaptop);});});
