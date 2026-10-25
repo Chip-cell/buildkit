@@ -82,7 +82,7 @@ const sampleBuild=context.optimizeDesktop(220000,'aaa',1080,{},{},{},context.CAT
 const mixedComparison=context.buildCompareTable(['desktop',newModels[0],newModels[1]],context.LAPTOPS,context.CAT,sampleBuild,220000,1080,'aaa');
 assert(!mixedComparison.includes('BEST PORTABILITY'),'An unknown desktop weight must not become a portability winner');
 nodes.homeLaptopShelf=element();context.renderHomeFeatured();
-assert.equal((nodes.homeLaptopShelf.innerHTML.match(/data-home-laptop=/g)||[]).length,3);
+assert.equal((nodes.homeLaptopShelf.innerHTML.match(/data-home-laptop=/g)||[]).length,2,'Promote only brands represented in the checked shortlist');
 assert(!nodes.homeLaptopShelf.innerHTML.includes('3200U'),'Legacy examples should not be promoted on the landing page');
 const controls=[0,1,2].map(index=>({attrs:{},handlers:{},dataset:{lesson:String(index)},setAttribute(k,v){this.attrs[k]=v;},addEventListener(k,fn){this.handlers[k]=fn;},focus(){this.focused=true;}}));
 const query=context.document.querySelectorAll;context.document.querySelectorAll=()=>controls;
@@ -124,3 +124,40 @@ assert(context.getFreshness('2026-10-24',Date.parse('2026-10-24T20:00:00Z')).lab
 assert(context.getFreshness('2026-10-24T18:00:00Z',Date.parse('2026-10-24T20:00:00Z')).label.includes('2 hours'));
 
 context.searchQuery='AS15-42';nodes.laptopEvidence.value='catalogue';context.lbudgetAll=true;context.renderLaptops();assert(!nodes.stepupContainer.innerHTML.includes('<b>Cheaper:</b>'),'An unknown price cannot produce a savings claim');context.searchQuery='';
+
+// Buying evidence must describe the same offer as the headline price.
+const chosen=context.LAPTOPS.find(L=>context.inBuyingShortlist(L));assert(chosen);
+const evidence=context.laptopBuyingEvidence(chosen);
+assert(evidence.includes(chosen.pn));assert(evidence.includes('Price observed'));assert(evidence.includes('Price source'));
+const advice=context.laptopBuyingAdvice(chosen);assert(advice.includes('Why choose this'));assert(advice.includes('Main compromise'));
+const card=context.renderLaptopCard(chosen,'');assert(card.includes('Report incorrect information'));assert(card.includes('Copy link'));
+assert(card.includes('mailto:buildkitindia@gmail.com?subject='));
+assert(context.laptopReportLink(chosen).includes(encodeURIComponent(chosen.pn)));
+assert.equal(context.BUYING_SHORTLIST.length,8);assert.equal(new Set(context.BUYING_SHORTLIST).size,8);
+assert(context.BUYING_SHORTLIST.every(id=>context.LAPTOPS.some(L=>L.id===id)));
+const unsupported=structuredClone(chosen);delete unsupported.fieldEvidence;assert(!context.inBuyingShortlist(unsupported));
+const noStock=structuredClone(chosen);noStock.offers.forEach(o=>o.inStock=null);assert(!context.inBuyingShortlist(noStock));
+nodes.focusedShortlist=element();nodes.focusedShortlist.checked=true;
+const focused=getResults();assert(focused.length>0&&focused.length<=8);assert(focused.every(L=>context.inBuyingShortlist(L)));
+nodes.focusedShortlist.checked=false;assert(getResults().length>focused.length);
+const other=context.LAPTOPS.find(L=>L.id!==chosen.id&&context.inBuyingShortlist(L));
+const diff=context.buildCompareTable([chosen.id,other.id],context.LAPTOPS,context.CAT,{},100000,1080,'aaa');
+assert(diff.includes('Recorded differences'));assert(diff.includes('Matching and unknown details'));assert(diff.includes('Copy comparison link'));
+assert(diff.includes('Price dates, exact SKUs and sources'));
+const mixedLink=context.comparisonPermalink(['desktop',chosen.id]);assert(mixedLink.includes('desktop'));assert(mixedLink.includes('&b='),'Shared desktop comparisons must carry build configuration');
+assert.equal(context.laptopPermalink('id with/#?'),'#laptop?id=id%20with%2F%23%3F');
+const evil=structuredClone(chosen);evil.pn='<img src=x onerror=alert(1)>';assert(!context.laptopBuyingEvidence(evil).includes(evil.pn));
+console.log('PASS: focused shortlist, matching price evidence, buying advice, report links, comparison disclosures and escaped share links.');
+
+// Resolve links through the actual router, without depending on browser layout.
+context.URLSearchParams=URLSearchParams;
+const savedRouting={switchTab:context.switchTab,fillCompare:context.fillCompare,openLaptop:context.openLaptop,closeLaptopModal:context.closeLaptopModal,restore:context.restore,resolveRestoredManual:context.resolveRestoredManual,validateRestoredDesktopBuild:context.validateRestoredDesktopBuild,renderDesktop:context.renderDesktop};
+let routedTab,openedId,restoredComparison=0;
+context.switchTab=name=>{routedTab=name;};context.fillCompare=()=>{};context.openLaptop=id=>{openedId=id;};context.closeLaptopModal=()=>{};
+context.location.hash=context.laptopPermalink(chosen.id);context.routeFromHash();assert.equal(routedTab,'laptop');assert.equal(openedId,chosen.id);
+context.location.hash=context.comparisonPermalink([chosen.id,other.id]);context.routeFromHash();assert.equal(routedTab,'compare');assert.equal(context.cmpSlots[0],chosen.id);assert.equal(context.cmpSlots[1],other.id);
+context.location.hash='#compare?ids=unknown,'+chosen.id+','+chosen.id;context.routeFromHash();assert.equal(context.cmpSlots.filter(Boolean).length,1);
+context.restore=()=>{restoredComparison++;};context.resolveRestoredManual=()=>{};context.validateRestoredDesktopBuild=()=>{};context.renderDesktop=()=>{};
+context.location.hash=mixedLink;context.routeFromHash();assert.equal(restoredComparison,1);assert.equal(context.cmpSlots[0],'desktop');assert(context.isShareHash());
+Object.assign(context,savedRouting);context.location.hash='';
+console.log('PASS: laptop and comparison deep links, unknown/duplicate IDs, and desktop state in mixed comparisons.');
