@@ -76,3 +76,14 @@ All 699 stored offers were classified; all 676 recorded source URLs were attempt
 No cart checkout, postcode-specific delivery, payment-card discount eligibility, live monitoring or universal stock guarantee is implied. A blocked or mismatched source is explicitly unverified, not proof that the recorded price is wrong.
 
 The price sweep also removes unsupported fixed rupee savings from the guide, prevents missing laptop prices from being treated as zero in the cheaper-alternative banner, and labels date-only observations without inventing an hourly check time.
+
+
+## Buying experience — 26 October 2026
+
+Laptop cards and details place the headline price beside its matching observation date, exact SKU, retailer source and specification source. When no observation matches the displayed figure, the interface says so instead of attaching another offer's date. Why choose this / Main compromise uses the recorded strengths and downsides, with explicit fallback advice for missing assessments.
+
+The default Focused shortlist contains eight explicitly selected IDs in `BUYING_SHORTLIST` in index.html. A record appears only while its SKU, CPU, RAM-capacity and screen-size field checks are present, its model-quality checks pass and it has an eligible product-page price. This is a scoped evidence shortlist, not a complete independent hardware audit or benchmark ranking. Uncheck the control to browse the full catalogue. To maintain it, review the original sources and field evidence before changing the eight IDs; never advance check dates without a new observation. The homepage uses the same eligibility checks.
+
+Comparisons show recorded differences first; matching/unknown fields and detailed price sources expand separately. Laptop links use `#laptop?id=...`; comparison links use `#compare?ids=...`. Mixed desktop/laptop links also carry the existing validated desktop share state. These are static shareable views; per-product social preview images and separate SEO pages are not added here.
+
+Each card and dialog includes a correction email draft addressed to the site's existing public contact, with model/SKU/link and fields for a correction and source. It opens the visitor's email application; it does not send automatically or provide a server-side ticket queue. Clipboard failures offer a manual-copy prompt. No accounts, backend, new dependency, price refresh or new verification claims were added.
